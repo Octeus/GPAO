@@ -12,7 +12,7 @@ const { BrowserWindow } = require('electron'),
     ipc = require('electron').ipcMain,
     { save, openNative, importXLS, openDialog } = require('./filesManager'),
     { cypher } = require('./volumes'),
-    reactProdMode = false,
+    reactProdMode = true,
     isWindows = process.platform === "win32",
     mainIndex = (reactProdMode === false)
         ? `http://localhost:3000`

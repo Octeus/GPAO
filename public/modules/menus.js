@@ -145,9 +145,9 @@ exports.mainMenu = (win) => {
                 ] : [
                     {role: 'selectAll'}
                 ]),
-                {role: 'reload'},
+                /*{role: 'reload'},
                 {role: 'forceReload'},
-                {role: 'toggleDevTools'},
+                {role: 'toggleDevTools'},*/
             ]
         },
         {
@@ -310,13 +310,6 @@ exports.mainMenu = (win) => {
                         win.webContents.send('interactWithFront', 'Search')
                     },
                 },
-                {
-                    label: 'Terminal',
-                    accelerator: 'CommandOrControl+Alt+Shift+W',
-                    click: () => {
-                        win.webContents.send('interactWithFront', 'Terminal window')
-                    },
-                },
             ]
         },
         {
@@ -442,9 +435,9 @@ exports.projectMenu = (win) => {
                         win.webContents.send('checkForUpdates.reply');
                     }
                 },
-                {role: 'reload'},
+                /*{role: 'reload'},
                 {role: 'forceReload'},
-                {role: 'toggleDevTools'},
+                {role: 'toggleDevTools'},*/
             ]
         },
         {

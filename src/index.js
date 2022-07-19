@@ -11,7 +11,6 @@ import Footer from "./common/Footer/Footer";
 // Pages
 import Main from './pages/Main/Main';
 import Modal from './pages/Modals/Modal';
-import Default from "./pages/Default/Default";
 // Jsons
 import Todo from '../src/pages/Modals/Templates/todo.json';
 import NewProject from "./pages/Modals/Templates/NewProject";
@@ -55,14 +54,11 @@ if (view) {
                 if (!document.querySelector('#localhost-main')) {
                     let scripts = (document.body.dataset.view !== 'newProject')
                         ? [
-                            "./assets/js/modals.js",
-                            "./assets/js/terminal.js",
                             "./assets/js/draggables.js",
                             "./assets/js/utils.js"
                         ]
 
                         : [
-                            "./assets/js/modals.js",
                             "./assets/js/utils.js"
                         ];
 
@@ -545,11 +541,6 @@ if (view) {
                             <NewProject className={db.settings.theme + ' bg-2 color border-color'} type={modal} data={db}/>
                         );
 
-                    } else {
-
-                        return (
-                            <Default/>
-                        );
                     }
                 }
 
@@ -571,17 +562,4 @@ if (view) {
     });
     ipc.send('invokeActionDB', ['read', dbModel]);
 
-} else {
-
-    ReactDOM.render(
-        <React.StrictMode>
-            <Default />
-        </React.StrictMode>,
-        document.querySelector('#container')
-    );
-
-    // If you want to start measuring performance in your app, pass a function
-    // to log results (for example: reportWebVitals(console.log))
-    // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-    reportWebVitals();
 }

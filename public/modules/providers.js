@@ -12,7 +12,7 @@ const { BrowserWindow } = require('electron'),
     ipc = require('electron').ipcMain,
     { save, openNative, importXLS, openDialog } = require('./filesManager'),
     { cypher } = require('./volumes'),
-    reactProdMode = true,
+    reactProdMode = false,
     isWindows = process.platform === "win32",
     mainIndex = (reactProdMode === false)
         ? `http://localhost:3000`
@@ -60,6 +60,7 @@ getOldFiles( (olds) => {
 exports.buildWindow = (data, prev = false, preload = false) => {
 
     let win = new BrowserWindow({
+        name: data.name,
         titleBarStyle: data.titleBar,
         width: data.width,
         modal: data.modal,
@@ -102,31 +103,32 @@ exports.buildWindow = (data, prev = false, preload = false) => {
         Menu.setApplicationMenu(menu);
     }
 
-    win.webContents.on('before-input-event', (event, input) => {
+    if (data.name === 'main') {
 
-        /*if (
-            (input.control && input.key.toLowerCase() === 'q')
+        win.webContents.on('before-input-event', (event, input) => {
+
+            if (
+                (input.control && input.key.toLowerCase() === 'q')
                 || (input.command && input.key.toLowerCase() === 'q')
-            || (input.control && input.key.toLowerCase() === 'w')
+                || (input.control && input.key.toLowerCase() === 'w')
                 || (input.command && input.key.toLowerCase() === 'w')
-        ) {
+            ) {
 
-            event.preventDefault();
-            console.log('tryin\' to quit');
-            win.webContents.send('exitApp');
-        }
+                event.preventDefault();
+                win.webContents.send('exitApp');
+            }
 
-        if (
-            (input.control && input.key.toLowerCase() === 'r')
+            if (
+                (input.control && input.key.toLowerCase() === 'r')
                 || (input.command && input.key.toLowerCase() === 'r')
-            || (input.control && input.shift && input.key.toLowerCase() === 'r')
+                || (input.control && input.shift && input.key.toLowerCase() === 'r')
                 || (input.command && input.shift && input.key.toLowerCase() === 'r')
-        ) {
+            ) {
 
-            event.preventDefault();
-            console.log('tryin\' to reload ?');
-        }*/
-    })
+                event.preventDefault();
+            }
+        })
+    }
 
     win.loadURL(data.file);
 
@@ -170,6 +172,7 @@ exports.windowDataProvider = (module, preload = false, modal = false) => {
         let json = JSON.stringify({view: module, modal: null, pathToMedia: cypher, start: startClasses});
 
         return {
+            'name': 'splash',
             'file': splash + `?data=${json}`,
             'height': 400,
             'width': 600,
@@ -197,6 +200,7 @@ exports.windowDataProvider = (module, preload = false, modal = false) => {
         let json = JSON.stringify({view: module, modal: null, pathToMedia: cypher, start: startClasses});
 
         return {
+            'name': 'connexion',
             'file': connexion + `?data=${json}`,
             'height': 300,
             'width': 500,
@@ -224,6 +228,7 @@ exports.windowDataProvider = (module, preload = false, modal = false) => {
         let json = JSON.stringify({view: module, modal: null, pathToMedia: cypher, start: startClasses, action: 'none'});
 
         return {
+            'name': 'newProject',
             'file': mainIndex + `?data=${json}`,
             /*'height': (getRole(['octeus']) === true && files.length > 0) ? 500 : 250,*/
             'height': 250,
@@ -254,6 +259,7 @@ exports.windowDataProvider = (module, preload = false, modal = false) => {
         let json = JSON.stringify({view: module, modal: null, pathToMedia: cypher, start: startClasses, action: preload.action});
 
         return {
+            'name': 'main',
             'file': mainIndex + `?data=${json}`,
             'height': dimensions.height,
             'width': dimensions.width,

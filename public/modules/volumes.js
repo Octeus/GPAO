@@ -15,7 +15,7 @@ const isDev = require('electron-is-dev');
  */
 
 exports.cypher = {
-    'key': process.env.CYPHER_KEY,
+    'key': '14189dc35ae35e75ff31d7502e245cd9bc7803838fbfd5c773cdcd79b8a28bbd',
     'decrypted': {
         'tmp': (isDev)
             ? path.join(__dirname, '../Data/Temp')

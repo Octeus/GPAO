@@ -289,7 +289,7 @@ export function required(customer) {
     for (let i = 0; i < exams.length; i++) {
         let exam = exams[i];
         for (const examKey in exam) {
-            if (!examKey.includes['documents'] && exam[examKey].length < 1) {
+            if (!['documents'].includes(examKey) && exam[examKey].length < 1) {
                 checks.push('traveler > exams > exams ' + (i+1) + ' > ' + examKey.replaceAll('_', ' '))
             }
         }
@@ -299,7 +299,7 @@ export function required(customer) {
     for (let i = 0; i < treatments.length; i++) {
         let treatment = treatments[i];
         for (const treatmentKey in treatment) {
-            if (!treatmentKey.includes['documents', 'drugs'] && treatment[treatmentKey].length < 1) {
+            if (!['documents', 'drugs'].includes(treatmentKey) && treatment[treatmentKey].length < 1) {
                 checks.push('traveler > treatments > treatment ' + (i+1) + ' > ' + treatmentKey.replaceAll('_', ' '))
             }
         }

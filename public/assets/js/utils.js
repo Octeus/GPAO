@@ -13,7 +13,7 @@ const dns2 = require("dns2");
 const ipc = require('electron').ipcRenderer;
 const customTitlebar = require('custom-electron-titlebar');
 const isWindowsPlatform = navigator.platform === 'Win32';
-const version = process.env.npm_package_version;
+const version = '1.0.0';
 let QRCode = require('qrcode');
 let storage = {},
     root = getRootCSS(),
@@ -29,9 +29,9 @@ let storage = {},
         enableMnemonics: true
     },
     L = require('leaflet'),
-    matIntervall,
+    matInterval,
     map,
-    windowIntervall,
+    windowInterval,
     markers = [];
 /*
 ========================================================
@@ -61,8 +61,6 @@ for (const key in localStorage) {
         }
     }
 }
-
-//console.log(mapper());
 
 //=========================== TitleBar invocation ===========================//
 
@@ -149,49 +147,16 @@ document.onclick = function(ev) {
     }
 }
 
-/**
- * Update TitleBar Options
- * @typedef {function}
- * @memberOf MainUtils
- * @param {string} key - TitleBarOptions Json key.
- * @param {string} value - TitleBarOptions Json value.
- * @returns {void}
- */
-
-function updateTitleBarOptions(key, value) {
-
-    if (isWindowsPlatform) {
-
-        //titlebar.dispose();
-        titlebarOptions[key] = value;
-        titlebar = new customTitlebar.Titlebar(titlebarOptions);
-    }
-}
-
-window.onload = function() {
-    aliveExitModal(storage);
-}
-
-/*let data = {
-    func: 'motif',
-    title: 'Test',
-    message: 'Salut les gars'
-};
-
-sendNotification(data, function(response){
-    console.log(response);
-});*/
-
 function initializedWindow() {
 
     let startWindow = document.querySelector('#loading-modal');
     let action = document.body.dataset.action;
     if (startWindow) {
 
-        clearTimeout(windowIntervall);
+        clearTimeout(windowInterval);
         let loaderSpan = startWindow.querySelector("#loading-bar span");
         loaderSpan.classList.add('fullStartLoader');
-        windowIntervall = setTimeout(function () {
+        windowInterval = setTimeout(function () {
             startWindow.parentElement.removeChild(startWindow);
         }, 1500)
     }
@@ -522,7 +487,7 @@ function searchSettings(e) {
 
 function setMap(coord, places, orphans) {
 
-    clearInterval(matIntervall);
+    clearInterval(matInterval);
 
     //Set icons
     let myIcons = [
@@ -599,7 +564,7 @@ function setMap(coord, places, orphans) {
     }
 
     // Set Map Size on resize
-    matIntervall = setInterval(function () {
+    matInterval = setInterval(function () {
         map.invalidateSize();
     }, 100);
 }
@@ -1141,4 +1106,136 @@ function prepareCard(theme) {
             'temp': temp
         }
     ipc.send('createCard', data);
+}
+
+/*
+========================================================
+======================== Modals ========================
+========================================================
+ */
+
+let get = JSON.parse(decodeURI(window.location.search.replace('?data=', '')));
+
+if (get.view === 'main') {
+
+    let exitModal = document.createElement('div'),
+        isWindowsNav = navigator.platform === 'Win32',
+        classe = (isWindowsNav) ? 'windows' : 'unix';
+    exitModal.setAttribute('class', 'exit-modal-container ' + storage.settings.theme + ' border-color');
+    exitModal.setAttribute('id', classe + '-exit-modal-container');
+
+    let html;
+    if (isWindowsNav) {
+        html = '<div id="exit-modal" class="modal-block ' + storage.settings.theme + ' bg color border-color">\n\t';
+        html += '<div id="exit-heading" class="' + storage.settings.theme + ' exitBG color-2">\n\t\t<img' +
+            ' src="./assets/media/img/favicon.svg">\n\t\t<p>Confirm Exit</p>\n\t\t</div>\n\t';
+        html += '<div class="sup-modal">\n\t\t';
+        html += '<span id="question-exit">?</span>\n\t\t';
+        html += '<p>Are you sure you want to exit ?</p>\n\t\t';
+        html += '</div>\n\t';
+    } else {
+        html = '<div id="exit-modal" class="modal-block ' + storage.settings.theme + ' bg color">\n\t';
+        html += '<div class="sup-modal" id="' + classe + '-sup-modal">\n\t\t';
+        html += '<img src="./assets/media/img/logo.svg">\n\t\t';
+        html += '<div>\n\t\t\t';
+        html += '<h4>Confirm Exit</h4>\n\t\t\t';
+        html += '<small>Are you sure you want to exit ?</small>\n\t\t\t';
+        html += '</div>\n\t\t';
+        html += '</div>\n\t';
+    }
+    html += '<div class="sub-modal ' + storage.settings.theme + ' bg color">\n\t\t';
+    if (isWindowsNav) {
+        html += '<button type="button" class="modal-button ' + storage.settings.theme + ' bg-2 color"' +
+            ' id="exitModalOk">EXIT</button>\n\t\t';
+        html += '<button type="button" class="modal-button ' + storage.settings.theme + ' bg-2 color"' +
+            ' id="exitModalNok">CANCEL</button>\n\t';
+    } else {
+        html += '<button type="button" class="modal-button ' + storage.settings.theme + ' bg-2 color"' +
+            ' id="exitModalNok">CANCEL</button>\n\t';
+        html += '<button type="button" class="modal-button ' + storage.settings.theme + ' bg-2 color"' +
+            ' id="exitModalOk">EXIT</button>\n\t\t';
+    }
+    html += '</div>\n';
+    html += '</div>';
+
+    exitModal.innerHTML = html;
+    document.body.appendChild(exitModal);
+
+    let ok = exitModal.querySelector('#exitModalOk'),
+        nok = exitModal.querySelector('#exitModalNok');
+
+    document.onkeyup = function (ev) {
+
+        if (exitModal.style.display === 'flex') {
+
+            if (ev.key === 'Enter') {
+                confirmQuit = true;
+                window.close();
+            }
+
+            if (ev.key === 'Escape') {
+                if (isWindowsNav) {
+                    exitModal.style.display = 'none';
+                } else {
+                    exitModal.querySelector('#exit-modal').classList.remove('displayUnixErrorModal');
+                    setTimeout(function () {
+                        exitModal.style.display = 'none';
+                    }, 210);
+                }
+                confirmQuit = false;
+            }
+        }
+    }
+
+    nok.onclick = function () {
+        if (isWindowsNav) {
+            exitModal.style.display = 'none';
+        } else {
+            exitModal.querySelector('#exit-modal').classList.remove('displayUnixErrorModal');
+            setTimeout(function () {
+                exitModal.style.display = 'none';
+            }, 210);
+        }
+        confirmQuit = false;
+    }
+    ok.onclick = function () {
+        confirmQuit = true;
+        window.close();
+    }
+
+    ipc.on('exitApp', (event, data) => {
+
+        console.log('test')
+
+        exitModal.style.display = 'flex';
+        if (!isWindowsNav) {
+            setTimeout(function () {
+                exitModal.querySelector('#exit-modal').classList.add('displayUnixErrorModal');
+            }, 50);
+        }
+    });
+
+    ipc.on('focus', (event, data) => {
+
+        if (exitModal.style.display === 'flex') {
+            if (data === false) {
+                document.body.classList.add('blurErrorWindow');
+            } else {
+                document.body.classList.remove('blurErrorWindow');
+            }
+        }
+    });
+
+    window.onbeforeunload = function (e) {
+
+        if (confirmQuit === false) {
+            e.returnValue = false;
+            document.querySelector('.exit-modal-container').style.display = 'flex';
+            if (!isWindowsNav) {
+                setTimeout(function () {
+                    document.querySelector('#exit-modal').classList.add('displayUnixErrorModal');
+                }, 50);
+            }
+        }
+    }
 }

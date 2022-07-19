@@ -18,8 +18,7 @@ const { database } = require('./database'),
     { buildWindow, windowDataProvider } = require('./providers'),
     { notificate } = require('./notifications'),
     { fileDrag, save, openNative, importXLS, getMarkdownFiles, getCustomerModels, templates } = require('./filesManager'),
-    cloudToken = process.env.CLOUD_TOKEN,
-    { ptyWrite, ptyKill, ptyEvent } = require('./pty-xterm'),
+    cloudToken = '$ghtF52Dfr584Reds2899RTGhjyD52F68ev55',
     { getDevices, getDicomDevices } = require('./mounted_devices'),
     { getRole, getOldFiles } = require('./database'),
     { prepareFaces } = require('./cardPrinter'),
@@ -39,7 +38,7 @@ let isConnected = false;
  * @returns {void}
  */
 
-exports.ipcsBeforeLoad = () => {
+exports.ipcBeforeLoad = () => {
 
 // On DB call
     ipc.on('invokeActionDB', function (event, array) {
@@ -102,11 +101,6 @@ exports.ipcsBeforeLoad = () => {
         });
     });
 
-    // Resize Terminal
-    ipc.on('terminal.resize', function (event, size) {
-        event.sender.send('terminal.resize.reply', size);
-    });
-
     ipc.on('update-user', function (event, pack) {
 
         const options = {
@@ -148,17 +142,6 @@ exports.ipcsBeforeLoad = () => {
  */
 
 exports.ipcAfterLoad = () => {
-
-    //ptyEvent('data');
-
-    /*ipc.on("terminal.keystroke", (event, data) => {
-        ptyWrite(data);
-    });*/
-
-    //  Activate terminal
-    ipc.on('activeTerminal', function (event) {
-        event.sender.send('renderTerminal', true);
-    });
 
     // On droping files
     ipc.on('fileDrag', function (event, files) {

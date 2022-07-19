@@ -86,10 +86,6 @@ class Footer extends React.Component {
             }
             elmt.parentElement.classList.add('selected');
 
-            if (action === 'terminal') {
-                ipc.send('activeTerminal');
-            }
-
             if (action === 'logs') {
                 this.scrollerLogs();
             }

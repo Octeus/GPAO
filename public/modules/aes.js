@@ -7,7 +7,7 @@
 
 const folderEncrypt = require('folder-encrypt');
 const explorer = require('fs');
-const key = process.env.CYPHER_KEY;
+const key = '14189dc35ae35e75ff31d7502e245cd9bc7803838fbfd5c773cdcd79b8a28bbd';
 const { logger } = require('./logger');
 
 /**

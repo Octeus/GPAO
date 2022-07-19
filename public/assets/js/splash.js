@@ -9,9 +9,9 @@ const ipc = require('electron').ipcRenderer;
 const dns2 = require("dns2");
 let splashConnectedTimeOut, splashLoopCheckOnline = 1000;
 let connected = false;
-const version = process.env.npm_package_version;
-const author = process.env.AUTHOR;
-const security = process.env.SECURITY;
+const version = '1.0.0';
+const author = 'Octeus';
+const security = 'active';
 
 
 let get = JSON.parse(decodeURI(window.location.search.replace('?data=', '')));

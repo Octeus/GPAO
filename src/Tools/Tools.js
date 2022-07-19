@@ -174,13 +174,6 @@ export function setForms(data, theme) {
         excepts = ['password', 'puk', 'avatar'],
         dates = ['birthdate'],
         radios = ['sex'],
-        numbers = ['children', 'height', 'weight', 'bmi'],
-        numbersRules = {
-            'children': 1,
-            'height': 0.1,
-            'weight': 0.1,
-            'bmi': 1
-        },
         empty = true,
         specials = ['exams', 'treatments'];
 

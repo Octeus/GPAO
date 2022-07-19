@@ -1,4 +1,3 @@
-import logo from '../../Default/logo.svg';
 import Button from "../../../components/Button/Button";
 import React from "react";
 import { getRole } from "../../../Tools/Tools";

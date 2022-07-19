@@ -97,19 +97,11 @@ function callWindow(db, props, theme) {
 
     const heading = () => {
 
-        if (job === 'Terminal') {
-            return (
-                <div>
-                    <p className='footerModal-label'>{job} :</p>
-                </div>
-            );
-        } else {
-            return (
-                <div>
-                    <p className='footerModal-label'>{job} : </p>
-                </div>
-            );
-        }
+        return (
+            <div>
+                <p className='footerModal-label'>{job} : </p>
+            </div>
+        );
     };
 
     if (parent === 'footerDrag') {
@@ -205,17 +197,7 @@ function Job(job, props, db, theme) {
         scrollerLogs();
     })
 
-    /*if (job === 'Terminal') {
-
-        return (
-            <div className='terminals-container' id='terminal-container-1'>
-                <div id='terminal-1' className='terminals'>
-                    <div className='xterm-container'></div>
-                </div>
-            </div>
-        );
-
-    } else*/ if (job === 'Logs') {
+    if (job === 'Logs') {
 
         return (
             <div id='logs-container'>

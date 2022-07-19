@@ -6,7 +6,6 @@
  */
 
 const fs = require('fs');
-const { app } = require('electron');
 const { cypher } = require('./volumes');
 const { logger } = require('./logger');
 
@@ -233,54 +232,3 @@ function updateUser(obj) {
         logger('Parsing error:', e);
     }
 }
-
-/**
- * Encrypt the DB folder.
- * @typedef {function}
- * @memberOf Database
- * @returns {void}
- */
-
-function encryptOnce() {
-
-    encrypt(cypher.decrypted.db, cypher.crypted.db, function () {
-
-        logger('db encrypted');
-        setTimeout(function(){
-            app.quit();
-        }, 2000);
-
-    }, true);
-};
-
-/**
- * Decrypt the DB folder.
- * @typedef {function}
- * @memberOf Database
- * @returns {void}
- */
-
-function decryptOnce() {
-
-    decrypt(cypher.crypted.db, cypher.decrypted.db, function () {
-
-        logger('db decrypted');
-        app.quit();
-    });
-};
-
-/**
- * Decrypt or encrypt DB if needed instead of launching App.
- * @typedef {function}
- * @memberOf Database
- * @returns {void}
- */
-
-exports.debugDB = () => {
-
-    if (process.env.ENCRYPT_ONCE === 'true') {
-        encryptOnce();
-    }   if (process.env.DECRYPT_ONCE === 'true') {
-        decryptOnce();
-    }
-};

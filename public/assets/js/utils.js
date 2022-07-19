@@ -14,7 +14,7 @@ const ipc = require('electron').ipcRenderer;
 const customTitlebar = require('custom-electron-titlebar');
 const isWindowsPlatform = navigator.platform === 'Win32';
 const version = process.env.npm_package_version;
-var QRCode = require('qrcode');
+let QRCode = require('qrcode');
 let storage = {},
     root = getRootCSS(),
     confirmQuit = false,
@@ -674,6 +674,15 @@ function setFormListener(elmt, name) {
         cle.querySelector('svg').innerHTML = ok;
     } else {
         cle.querySelector('svg').innerHTML = nok;
+    }
+}
+
+function setAllFormListeners() {
+
+    let controls = document.querySelectorAll('.customer-form-input')
+    for (let i = 0; i < controls.length; i++) {
+        let name = controls[i].name;
+        setFormListener(controls[i], name);
     }
 }
 

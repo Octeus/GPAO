@@ -87,8 +87,7 @@
     "dist": "electron-builder --win",
     "dist:linux": "electron-builder --linux",
     "dist:mac": "electron-builder --mac",
-    "pack": "electron-builder --dir",
-    "jsdoc": "node newDocs"
+    "pack": "electron-builder --dir"
   },
   "eslintConfig": {
     "extends": [

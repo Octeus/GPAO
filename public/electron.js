@@ -19,10 +19,10 @@ const { app } = require('electron'),
 
 // Custom Modules
 const { buildWindow, windowDataProvider } = require('./modules/providers'),
-    { createSVGIndexHTML, createReactSVGComponent } = require('./modules/svgLister'),
-    //{ electronStt } = require('./modules/localhost'),
+    //{ createSVGIndexHTML, createReactSVGComponent } = require('./modules/svgLister'),
+    { electronStt } = require('./modules/localhost'),
     { ipcsBeforeLoad, ipcAfterLoad } = require('./modules/ipcCalls'),
-    { qrCode, buildCard } = require('./modules/cardPrinter'),
+    //{ qrCode, buildCard } = require('./modules/cardPrinter'),
     //{ ptyKill } = require('./modules/pty-xterm'),
     { cypher } = require('./modules/volumes'),
     { logsCleaner } = require('./modules/filesManager'),
@@ -44,22 +44,6 @@ ipcsBeforeLoad();
 // Preprocesses
 app.commandLine.appendSwitch('--ignore-gpu-blacklist');
 app.setAsDefaultProtocolClient("datacommander");
-//app.setAppUserModelId(process.execPath);
-
-// Development tools
-if (isDev) {
-
-    //createSVGIndexHTML(); // use "true" argument to force icon.html overwriting
-    //createReactSVGComponent('warning', 'Warning');
-}
-
-//===========================================================================
-//===========================================================================
-
-// Tests
-//qrCode('Merci de me renvoyer à l\'adresse suivante : OCTEUS 18 PARC ECONOMIQUE PAYSAGER 33750 BEYCHAC-ET-CAILLAU',
-// 'marionlaplagne24@gmail.com');
-//buildCard('marionlaplagne24@gmail.com', {});
 
 //===========================================================================
 //===========================================================================
@@ -83,7 +67,9 @@ function createWindow () {
             windowDataProvider('splash')
         );
         setWindow(splash);
-        //electronStt('on');
+        if (isDev) {
+            electronStt('on');
+        }
 
         // On create window
         ipc.on('invokeConnexionBox', function (event, from) {
@@ -209,7 +195,9 @@ function createApp() {
 
         app.on('before-quit', () => {
             //ptyKill();
-            //electronStt('off');
+            if (isDev) {
+                electronStt('off');
+            }
         });
     }
 }

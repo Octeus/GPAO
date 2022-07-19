@@ -9,7 +9,7 @@ const path = require('path'),
     isDev = require('electron-is-dev'),
     fs = require('fs'),
     realPath = path.join(__dirname, '../../'),
-    reactProdMode = /*(process.env.REACTPROD === 'false') ? false : */true;
+    reactProdMode = false;
 
 /**
  * Create isElectronOn file content.

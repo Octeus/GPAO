@@ -205,7 +205,7 @@ function Job(job, props, db, theme) {
         scrollerLogs();
     })
 
-    if (job === 'Terminal') {
+    /*if (job === 'Terminal') {
 
         return (
             <div className='terminals-container' id='terminal-container-1'>
@@ -215,7 +215,7 @@ function Job(job, props, db, theme) {
             </div>
         );
 
-    } else if (job === 'Logs') {
+    } else*/ if (job === 'Logs') {
 
         return (
             <div id='logs-container'>

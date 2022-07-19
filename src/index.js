@@ -128,7 +128,6 @@ if (view) {
                 }));
                 localStorage.setItem('traveler', JSON.stringify({
                     "language": "",
-                    "avatar": false,
                     "address_1": "",
                     "address_2": "",
                     "address_3": "",
@@ -139,7 +138,7 @@ if (view) {
                     "weight": "",
                     "height": "",
                     "bmi": "",
-                    "handicap": false,
+                    "handicap": "",
                     "phone_prefix": "",
                     "phone": "",
                     "mobile_prefix": "",
@@ -502,7 +501,7 @@ if (view) {
                         "weight": "",
                         "height": "",
                         "bmi": "",
-                        "handicap": false,
+                        "handicap": "",
                         "phone_prefix": "",
                         "phone": "",
                         "mobile_prefix": "",

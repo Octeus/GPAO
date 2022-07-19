@@ -100,6 +100,14 @@ class PrepareUpdate extends React.Component {
                                     data={this.state.db}
                                     active={true}
                                 />
+                                <Button
+                                    className='Done-job-btn'
+                                    text='Close'
+                                    onClick={() => this.state.getModal('none', null)}
+                                    type='button'
+                                    data={this.state.db}
+                                    active={true}
+                                />
                             </div>
                         </>
                     }
@@ -112,7 +120,22 @@ class PrepareUpdate extends React.Component {
                                 <Button
                                     className='refresh-btn'
                                     text='Refresh devices list'
-                                    onClick={() => this.refreshList()}
+                                    onClick={() => {
+
+                                        let refresher = document.querySelector('#device-title .refresh-devices');
+                                        if (refresher && this.state.devices !== null) {
+                                            refresher.click();
+                                        }
+                                        this.refreshList()
+                                    }}
+                                    type='button'
+                                    data={this.state.db}
+                                    active={true}
+                                />
+                                <Button
+                                    className='Done-job-btn'
+                                    text='Close'
+                                    onClick={() => this.state.getModal('none', null)}
                                     type='button'
                                     data={this.state.db}
                                     active={true}

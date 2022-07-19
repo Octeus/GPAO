@@ -411,4 +411,6 @@ export function populateInputs(data) {
     if (loadingModal) {
         document.body.removeChild(loadingModal);
     }
+
+    window.setAllFormListeners();
 }

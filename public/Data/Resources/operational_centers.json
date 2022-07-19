@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "name": "Octeus Development",
+        "address": "Bélingard Bas",
+        "zip": "24240",
+        "city": "POMPORT",
+        "country": "FRANCE",
+        "tel": "0662687011",
+        "mail": "fred.geffray@gmail.com",
+        "lat": "44.79952000",
+        "lng": "0.43366000",
+        "created_at": "2022-03-29 21:59:15",
+        "updated_at": null
+    },
+    {
+        "id": "2",
+        "name": "Octeus Logistics",
+        "address": "87 Chemin de Mussonville",
+        "zip": "33130",
+        "city": "BEGLES",
+        "country": "FRANCE",
+        "tel": "0658684616",
+        "mail": "sandrine.reby@hotmail.fr",
+        "lat": "44.79306000",
+        "lng": "-0.56633000",
+        "created_at": "2022-03-29 21:59:15",
+        "updated_at": null
+    },
+    {
+        "id": "3",
+        "name": "Octeus Head Quarter",
+        "address": "18 PARC ECONOMIQUE PAYSAGER",
+        "zip": "33750",
+        "city": "BEYCHAC-ET-CAILLAU",
+        "country": "FRANCE",
+        "tel": "0750042849",
+        "mail": "octeus3@gmail.com",
+        "lat": "44.88336800",
+        "lng": "-0.35855000",
+        "created_at": "2022-03-29 21:59:15",
+        "updated_at": null
+    },
+    {
+        "id": "4",
+        "name": "TESSI Technologies",
+        "address": "1 Rue des Satellites",
+        "zip": "33185",
+        "city": "LE HAILLAN",
+        "country": "FRANCE",
+        "tel": "0557222061",
+        "mail": "contact@tessi.fr",
+        "lat": "44.86066730",
+        "lng": "-0.67610900",
+        "created_at": "2022-03-29 21:59:15",
+        "updated_at": null
+    }
+]

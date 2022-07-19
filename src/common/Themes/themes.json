@@ -1,0 +1,62 @@
+[
+  {
+    "name": "default",
+    "details": {
+      "Background color": "default bg",
+      "Background color secondary": "default bg-2",
+      "Font color": "default color",
+      "Font color secondary": "default color-2",
+      "Border color": "default border-color",
+      "Hover element": "default hover",
+      "Disabled element": "default opacity"
+    }
+  },
+  {
+    "name": "dark",
+    "details": {
+      "Background color": "dark bg",
+      "Background color secondary": "dark bg-2",
+      "Font color": "dark color",
+      "Font color secondary": "dark color-2",
+      "Border color": "dark border-color",
+      "Hover element": "dark hover",
+      "Disabled element": "dark opacity"
+    }
+  },
+  {
+    "name": "ocean",
+    "details": {
+      "Background color": "ocean bg",
+      "Background color secondary": "ocean bg-2",
+      "Font color": "ocean color",
+      "Font color secondary": "ocean color-2",
+      "Border color": "ocean border-color",
+      "Hover element": "ocean hover",
+      "Disabled element": "ocean opacity"
+    }
+  },
+  {
+    "name": "dracula",
+    "details": {
+      "Background color": "dracula bg",
+      "Background color secondary": "dracula bg-2",
+      "Font color": "dracula color",
+      "Font color secondary": "dracula color-2",
+      "Border color": "dracula border-color",
+      "Hover element": "dracula hover",
+      "Disabled element": "dracula opacity"
+    }
+  },
+  {
+    "name": "unicorn",
+    "details": {
+      "Background color": "unicorn bg",
+      "Background color secondary": "unicorn bg-2",
+      "Font color": "unicorn color",
+      "Font color secondary": "unicorn color-2",
+      "Border color": "unicorn border-color",
+      "Hover element": "unicorn hover",
+      "Disabled element": "unicorn opacity"
+    }
+  }
+]

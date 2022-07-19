@@ -1,0 +1,54 @@
+.required-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 4px;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.required-title {
+    font-size: 14px;
+    width: 100%;
+    color: firebrick;
+    font-weight: bold;
+}
+
+.required-fields-nok li {
+    font-size: 12px;
+    color: firebrick;
+    text-transform: capitalize;
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.required-fields-ok li {
+    font-size: 14px;
+    color: darkolivegreen;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.required-fields-ok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.prepare-card {
+    text-transform: capitalize;
+}
+
+.required-fields-ok + .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

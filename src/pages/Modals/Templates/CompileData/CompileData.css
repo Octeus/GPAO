@@ -1,0 +1,66 @@
+.card-stepper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.step-todo {
+    font-size: 14px;
+    opacity: 0.5;
+    font-style: italic;
+    list-style: disc;
+    margin-left: 20px;
+    position: relative;
+}
+
+.step-todo span {
+    border-radius: 500px;
+    min-height: 12px;
+    min-width: 12px;
+    max-height: 12px;
+    max-width: 12px;
+    border: 2px solid currentColor;
+    border-top: 2px solid transparent;
+    animation: rotate linear 1s infinite;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: -25px;
+}
+
+.step-done {
+    font-size: 14px;
+    color: darkolivegreen;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: bold;
+}
+
+.stepper-checked {
+    width: 14px;
+    height: 14px;
+    color: currentColor;
+    margin-right: 5px;
+}
+
+.stepper-checked path {
+    fill: currentColor;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.card-stepper.log-error {
+    font-size: 14px;
+}

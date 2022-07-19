@@ -1,0 +1,78 @@
+#user-container {
+    position: relative;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 6px;
+}
+
+#user-container input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 5px 0;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#user-container label {
+    position: relative;
+}
+
+#user-container label > span:first-child {
+    opacity: 0.5;
+}
+
+#user-container label {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+#user-container .inputs:not(:first-of-type) {
+    margin-top: 20px;
+}
+
+#user-container label input[type=password] {
+    width: calc(100% - 20px);
+    padding: 5px 20px 5px 0;
+}
+
+#user-container fieldset {
+    border-radius: 6px;
+    width: calc(100% - 30px);
+}
+
+#user-container fieldset:not(:first-of-type) {
+    margin: 20px 0 0 0;
+}
+
+#user-container fieldset small i {
+    font-size: 12px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+#scroll-user-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 450px;
+    overflow-y: auto;
+}
+
+.mismatch input {
+    border-color: firebrick!important;
+    color: firebrick!important;
+}
+
+.mismatch svg path {
+    fill: firebrick!important;
+}

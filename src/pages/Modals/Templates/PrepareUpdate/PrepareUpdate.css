@@ -1,0 +1,87 @@
+.prepare-advice {
+    text-align: center;
+    font-size: 14px;
+}
+
+.prepare-devices-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    width: calc(100% - 30px);
+    padding: 0 10px 0 20px;
+}
+
+.prepare-device-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    font-family: monospace;
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+    flex-direction: column;
+}
+
+#todo-list > li > ul::before, .prepare-devices-list > li > ul::before {
+    content: "";
+    height: calc(100% - 31px);
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 5px;
+    border-left: 1px dotted grey;
+}
+
+.prepare-device-item > b {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.prepare-device-item > ul {
+    width: 100%;
+    position: relative;
+}
+
+.prepare-device-item > ul::before {
+    content: "";
+    height: calc(100% - 31px);
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 5px;
+    border-left: 1px dotted grey;
+}
+
+.prepare-device-item > ul > li {
+    align-items: baseline;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    font-family: monospace;
+    font-size: 12px;
+    margin: 8px 0 8px 20px;
+    color: grey;
+}
+
+.prepare-device-item > ul > li::before {
+    content: "";
+    width: 9px;
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 1px);
+    left: -15px;
+    border-top: 1px dotted grey;
+}
+
+input[name="prepare-device-item"] {
+    margin-right: 10px!important;
+    cursor: pointer;
+}

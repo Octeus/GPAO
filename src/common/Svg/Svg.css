@@ -1,0 +1,11 @@
+#dropper {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 1;
+    animation: drop-clignote linear 1s infinite;
+}
+
+#dropper path {
+    fill: #fff;
+}

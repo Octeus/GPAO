@@ -1,0 +1,173 @@
+{
+    "activate": false,
+    "activation_datetime": "",
+    "cloud": false,
+    "password": "",
+    "accepted_terms": false,
+    "language": "",
+    "avatar": false,
+    "accessibility": false,
+    "dark_mode": false,
+    "ice": {
+        "trusted_third_party": {
+            "lastname": "",
+            "firstname": "",
+            "phone_prefix": "",
+            "phone": "",
+            "mobile_prefix": "",
+            "mobile": "",
+            "email": ""
+        },
+        "ice1": {
+            "lastname": "",
+            "firstname": "",
+            "relationship": "",
+            "phone_prefix": "",
+            "phone": "",
+            "mobile_prefix": "",
+            "mobile": "",
+            "email": ""
+        },
+        "ice2": {
+            "lastname": "",
+            "firstname": "",
+            "relationship": "",
+            "phone_prefix": "",
+            "phone": "",
+            "mobile_prefix": "",
+            "mobile": "",
+            "email": ""
+        },
+        "local1": {
+            "organization": "",
+            "contact_lastname": "",
+            "contact_firstname": "",
+            "phone_prefix": "",
+            "phone": "",
+            "mobile_prefix": "",
+            "mobile": "",
+            "email": "",
+            "validity_date": "",
+            "information": ""
+        },
+        "local2": {
+            "organization": "",
+            "contact_lastname": "",
+            "contact_firstname": "",
+            "phone_prefix": "",
+            "phone": "",
+            "mobile_prefix": "",
+            "mobile": "",
+            "email": "",
+            "validity_date": "",
+            "information": ""
+        },
+        "doctor": {
+            "lastname": "",
+            "firstname": "",
+            "phone_prefix": "",
+            "phone": "",
+            "email": ""
+        },
+        "insurance": {
+            "organization": "",
+            "contract_number": "",
+            "phone_prefix": "",
+            "phone": "",
+            "email": ""
+        }
+    },
+    "doctor": {
+        "regular": {
+            "language": "",
+            "lastname": "",
+            "firstname": "",
+            "phone_prefix": "",
+            "phone": "",
+            "email": "",
+            "address": "",
+            "city": "",
+            "zip_code": "",
+            "country": ""
+        },
+        "specialist1": {
+            "speciality": "",
+            "language": "",
+            "lastname": "",
+            "firstname": "",
+            "phone_prefix": "+0",
+            "phone": "",
+            "email": "",
+            "address": "",
+            "city": "",
+            "zip_code": "",
+            "country": ""
+        },
+        "specialist2": {
+            "speciality": "",
+            "language": "",
+            "lastname": "",
+            "firstname": "",
+            "phone_prefix": "+0",
+            "phone": "",
+            "email": "",
+            "address": "",
+            "city": "",
+            "zip_code": "",
+            "country": ""
+        },
+        "specialist3": {
+            "speciality": "",
+            "language": "",
+            "lastname": "",
+            "firstname": "",
+            "phone_prefix": "+0",
+            "phone": "",
+            "email": "",
+            "address": "",
+            "city": "",
+            "zip_code": "",
+            "country": ""
+        }
+    },
+    "notes": [],
+    "exams": [],
+    "treatments": [],
+    "travels": [],
+    "health": {
+        "chronic_pathologies": "",
+        "intolerances_medicated": "",
+        "vaccines": "",
+        "hypersensitivity_to_excipients": "",
+        "antecedents": {
+            "surgical": "",
+            "medicinal": "",
+            "obstetrics": "",
+            "family": ""
+        },
+        "allergies": {
+            "medicinal": "",
+            "food": "",
+            "respiratory": "",
+            "topicals": ""
+        }
+    },
+    "address_1": "",
+    "address_2": "",
+    "address_3": "",
+    "zip_code": "",
+    "city": "",
+    "country": "",
+    "blood_group": "",
+    "weight": "",
+    "height": "",
+    "bmi": "",
+    "handicap": false,
+    "phone_prefix": "",
+    "phone": "",
+    "mobile_prefix": "",
+    "mobile": "",
+    "state": "",
+    "children": 0,
+    "family_situation": ""
+}

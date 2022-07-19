@@ -1,0 +1,1103 @@
+html {
+    overflow: hidden;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.items-end {
+    align-items: flex-end;
+}
+
+.w-max {
+    width: max-content;
+}
+
+.icons-svg {
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.neutral {
+    fill: #1c3859;
+    color: #1c3859;
+}
+
+.danger {
+    fill: firebrick;
+    color: firebrick;
+}
+
+#main {
+    position: absolute;
+    width: calc(100% - 42px);
+    height: calc(100% - 62px);
+    /*z-index: 1;*/
+    top: 30px;
+    left: 20px;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    padding-left: 24px;
+    margin: 0 20px;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    border: 1px solid #b1b1b1;
+    border-radius: 4px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:focus ~ .checkmark {
+    box-shadow: 0 0 8px steelblue;
+    border-color: steelblue;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox-container .checkmark:after {
+    left: 3px;
+    top: 0;
+    width: 4px;
+    height: 7px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+#drag-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    border: 4px dashed #c1c1c1;
+    transition: all linear 0.15s;
+}
+
+#drag-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    background: linear-gradient(90deg, #161122 21px, transparent 1%) center, linear-gradient(#161122 21px, transparent 1%) center, #a799cc;
+    background-size: 22px 22px;
+}
+
+#drag-zone p {
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #a799cc;
+    border-radius: 6px;
+    font-weight: bold;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    animation: drop-clignote linear 1s infinite;
+}
+
+.display-drag-zone {
+    opacity: 1!important;
+    visibility: visible!important;
+}
+
+@keyframes drop-clignote {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hover {
+    user-select: none;
+    cursor: pointer;
+    transition: all linear 0.1s;
+}
+
+svg:not(.theme-avatars):not(.themes-logos) path {
+    fill: currentColor;
+}
+
+.befores {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+.soloIcon {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    top: 2px;
+}
+
+.blue {
+    color: steelblue;
+}
+
+.green {
+    color: olivedrab;
+}
+
+.orange {
+    color: darkorange;
+}
+
+.gold {
+    color: gold;
+}
+
+.red {
+    color: #8e454b;
+}
+
+[data-title]:hover::before {
+    content: attr(data-title);
+    position: absolute;
+    display: inline-block;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 12px;
+    z-index: 20;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+}
+
+[data-title]:hover::after {
+    content: '';
+    position: absolute;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    z-index: 21;
+}
+
+#main-theme-avatar {
+    position: absolute;
+    width: 30vh;
+    height: 30vh;
+    opacity: 0.1;
+    bottom: -2vh;
+    right: -5vh;
+    z-index: 0;
+}
+
+#main-announce-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#main-announce {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#main-announce li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: 14px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
+#main-announce li span {
+    font-family: 'FiraCodeLight', sans-serif;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+#main-onglets {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 36px;
+}
+
+#main-onglets li {
+    font-size: 14px;
+    padding: 0 26px;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    position: relative;
+    margin: 2px 0 0 4px;
+    height: 80%;
+    font-family: 'evolve-bold', sans-serif;
+}
+
+#main-onglets li svg {
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    right: 4px;
+    cursor: pointer;
+    width: 14px;
+    height: 14px;
+}
+
+#main-window {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+#main-content {
+    width: 100%;
+    height: calc(100% - 37px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+#main-content .main-windows-container {
+    background-color: transparent;
+    border: none;
+    overflow: auto;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    font-size: 12px;
+    line-height: 16px;
+    outline: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.main-windows-container.hidden {
+    display: none!important;
+}
+
+.main-windows-onglets.hidden {
+    opacity: 0.5;
+}
+
+.main-windows-container.none, .main-windows-container.img, .main-windows-container.svg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-windows-container.img img, .main-windows-container.svg svg {
+    max-height: 90%;
+    max-width: 80%;
+}
+
+.main-windows-container.svg svg {
+    width: 80%;
+    height: 80%;
+}
+
+.main-windows-container.none {
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.customer-form-input {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 14px;
+    background-color: transparent;
+}
+
+.customer-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 20px);
+    max-width: 780px;
+    margin: 20px auto;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    border: 1px solid;
+    border-radius: 6px;
+}
+
+.customer-form  > *, .customer-form > div > label {
+    width: 100%;
+}
+
+.customer-form label {
+    position: relative;
+}
+
+.customer-form label svg {
+    position: absolute;
+    z-index: 0;
+    width: 16px;
+    height: 16px;
+    color: inherit;
+    bottom: 20px;
+    right: 0;
+}
+
+.customer-form label svg path {
+    fill: currentColor;
+}
+
+.customer-form label input, .customer-form label select {
+    position: relative;
+    z-index: 1;
+}
+
+.customer-form label > span {
+    text-transform: capitalize;
+    font-size: 14px;
+}
+
+.customer-form label input:not([type="radio"]), .customer-form label select {
+    width: 100%;
+}
+
+.customer-form > div {
+    padding: 5px 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.customer-form h1 {
+    margin: 0 0 20px 0;
+    padding: 40px 0;
+    text-align: center;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.customer-form > i {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.radio-container span {
+    margin: 0 40px 0 10px;
+    cursor: pointer;
+}
+
+.radio-container label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10px 0 20px 0;
+}
+
+.packing-list {
+    margin: 0;
+    padding: 20px;
+    width: calc(100% - 40px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+}
+
+.packing-type {
+    position: absolute;
+    top: -40px;
+}
+
+.packing-letter {
+    right: 20px;
+}
+
+.packing-package {
+    right: 0;
+}
+
+.packing-list li, .packing-list li * {
+    font-size: 14px;
+}
+
+.packing-list li {
+    margin-right: 40px;
+}
+
+.packing-list li:not(.packing-type) {
+    padding: 8px 20px;
+    border: 2px solid;
+    border-radius: 600px;
+}
+
+.packing-list li img {
+    height: 100px;
+}
+
+.sticker-container {
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: flex-start!important;
+    margin: 20px 0!important;
+    flex-direction: row!important;
+}
+
+.sticker-form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.letter-container .sticker-form {
+    width: calc(100% - 10cm - 40px);
+}
+
+.package-container .sticker-form {
+    width: calc(100% - 8cm - 40px);
+}
+
+.sticker {
+    background-color: #fff;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sticker-letter {
+    width: 10cm;
+    height: 5cm;
+}
+
+.sticker-package {
+    width: 8cm;
+    height: 12cm;
+}
+
+.cutter {
+    width: calc(100% - 0.8cm);
+    height: calc(100% - 0.8cm);
+    border-radius: 10px;
+    border: 2px dashed #a1a1a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cutter > svg {
+    width: 28px;
+    height: 35px;
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.cutter > svg path {
+    fill: black!important;
+}
+
+.sticker-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: calc(100% - 0.6cm);
+    height: calc(100% - 0.6cm);
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.sticker-content * {
+    color: black;
+    font-family: 'robotobold', sans-serif;
+}
+
+.sticker-form .inputs {
+    width: 100%;
+}
+
+.stick-letter {
+    margin: 0;
+    padding: 5px 5px 5px 20px;
+    width: calc(100% - 90px);
+    height: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.stick-letter li {
+    margin: 4px 0;
+}
+
+.stick-letter li span {
+    font-size: 20px;
+}
+
+.stick-letter .qr-code {
+    position: absolute;
+    width: 60px;
+    display: flex;
+    height: 60px;
+    top: 2px;
+    right: 2px;
+    border-radius: 6px;
+    margin: 0;
+}
+
+.stick-letter .qr-code img {
+    width: 100%;
+    display: flex;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.stick-package {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    padding: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.stick-package-top {
+    margin: 0 10px 0 0;
+    width: calc(60% - 10px);
+    font-size: 10px;
+    font-family: 'robotolight', sans-serif;
+    height: 91px;
+}
+
+.stick-package-top li:not(.stick-label), .stick-package-top li span {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.stick-package-bottom li:not(.stick-label-to), .stick-package-bottom li span {
+    font-size: 20px;
+}
+
+.stick-package-bottom li:not(.stick-label-to) {
+    margin: 5px 0 0 10px;
+}
+
+.stick-package-bottom li:not(.stick-label-to) span {
+    font-family: 'robotoregular', sans-serif;
+}
+
+.stick-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.stick-label-to {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: 'robotobold', sans-serif;
+}
+
+.stick-package .qr-code {
+    width: calc(40% - 4px);
+    height: 87.77px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.stick-package .qr-code img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.weight-sticker {
+    width: 100%;
+    text-align: right;
+}
+
+.stick-package-bottom {
+    height: calc(100% - 180px);
+    margin: 0;
+    border-top: 2px solid black;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.sticker-checker {
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    background-color: black;
+    padding: 3px 0;
+    border-radius: 3px;
+}
+
+.bg-sticker {
+    position: absolute;
+    z-index: 1;
+    top: 0.8cm;
+    left: -0.5cm;
+    width: 5cm;
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.sticker-form .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+.qr-code .loader {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    visibility: hidden;
+}
+
+.qr-code .loader.visible {
+    opacity: 1!important;
+    visibility: visible!important;
+}
+
+.qr-code .loader span {
+    border: 3px solid #1C3859;
+    border-top: 3px solid transparent;
+    border-radius: 500px;
+    width: 20px;
+    height: 20px;
+    transform-origin: 50% 50%;
+    animation: rotate linear 1s infinite;
+}
+
+.qr-code canvas {
+    width: 100%!important;
+    height: 100%!important;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.delivery-form > .buttons {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#toPrint {
+    position: fixed;
+    z-index: 999999999;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.design-faces {
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.design-faces > li {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.design-faces > li span {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.design-faces > li svg {
+    width: 8.5cm;
+    height: 5.3cm;
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+.design-form .buttons {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.design-form > h1 {
+    margin-bottom: 0;
+}
+
+.design-form-container {
+    margin-top: 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    padding: 20px!important;
+}
+
+.design-form-container .inputs {
+    width: 100%;
+}
+
+.design-form-container label svg {
+    bottom: 2px;
+}
+
+fieldset.sub-contents, fieldset.drug-list-item {
+    width: calc(100% - 62px);
+    padding: 10px;
+    margin: 0 20px 20px 20px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+}
+
+fieldset.sub-contents legend, fieldset.drug-list-item legend {
+    font-size: 14px;
+    padding: 0 5px;
+    text-transform: capitalize;
+}
+
+.customer-form > .buttons {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.removeBtn, .addDrug, .removeDrug {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 16px;
+    margin: 5px;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.removeBtn, .removeDrug {
+    position: absolute;
+    top: -8px;
+    right: -16px;
+}
+
+.treatments-list-item, .exams-list-item {
+    position: relative;
+}
+
+.treatments-list-item input[type="file"], .exams-list-item input[type="file"] {
+ display: none;
+}
+
+.treatments-list-item input[type="date"] + svg, .exams-list-item input[type="date"] + svg {
+    bottom: 0!important;
+}
+
+.drugs-list {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.label-like {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.label-like > span:not(.drugs-list), .label-like > p, .label-like > ul {
+    text-transform: capitalize;
+    font-size: 14px;
+    width: 100%;
+}
+
+.label-like i {
+    width: 100%;
+    font-size: 14px;
+}
+
+.special-label-span {
+    padding: 5px 10px;
+    width: calc(100% - 20px)!important;
+}
+
+.label-like > p {
+    margin-top: 10px;
+}
+
+.file-li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 20px);
+    font-size: 12px;
+    margin: 0 10px;
+    padding: 5px 0;
+}
+
+.file-li:not(:first-of-type) {
+    border-top: 1px solid;
+}
+
+.file-li svg {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.file-li svg path {
+    fill: firebrick!important;
+}
+
+.claim-files {
+    font-size: 12px!important;
+    color: firebrick;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 20px) !important;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.claim-files span {
+    font-size: inherit!important;
+    margin: 3px 0;
+}
+
+
+.not-validated {
+    color: white!important;
+    background-color: firebrick!important;
+}
+
+.noMatchingPatient {
+    position: absolute;
+    width: calc(100% - 120px);
+    height: calc(100% - 120px);
+    top: 0;
+    left: 0;
+    z-index: 8;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 60px;
+}
+
+.noMatchingPatient > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid;
+    padding: 20px 40px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.noMatchingPatient > div p {
+    font-size: 12px;
+}
+
+.noMatchingPatient > div p b {
+    font-size: 12px;
+    color: firebrick;
+}
+
+.noMatchingPatient > div svg {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+

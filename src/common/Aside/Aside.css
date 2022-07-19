@@ -1,0 +1,332 @@
+#left-aside {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 20px;
+    height: calc(100% - 60px);
+    font-size: 12px;
+    top: 30px;
+    left: 0;
+    z-index: 2;
+}
+
+#left-aside > div {
+    width: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+#left-aside > div > ul {
+    transform: rotate(-90deg) translateY(-160px);
+    transform-origin: 100% 0;
+    margin: 0;
+    height: 20px;
+    position: absolute;
+    top: 0;
+}
+
+#left-aside > div > ul li {
+    padding: 0 10px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+#left-aside > div > ul li span {
+    font-size: 12px;
+    cursor: inherit;
+}
+
+#left-aside .drags {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: 250px;
+    border-right-style: solid;
+    border-right-width: 1px;
+    height: 100%;
+}
+
+#left-aside .befores {
+    transform-origin: 50% 50%;
+    transform: rotate(90deg);
+}
+
+.left-windows {
+    position: relative;
+}
+
+.left-windows[data-title]:hover::before {
+    top: 100%;
+    left: 50px;
+    transform-origin: 0 50%;
+    transform: rotate(90deg);
+}
+
+.left-windows[data-title]:hover::after {
+    top: calc(100% + 10px);
+    left: 53px;
+    transform-origin: 0 50%;
+    transform: rotate(-135deg);
+}
+
+#left-aside > div > ul {
+    z-index: 3;
+}
+
+#empty-customer {
+    font-size: 14px!important;
+    text-align: center;
+    width: 100%!important;
+}
+
+#empty-customer i {
+    font-size: 12px!important;
+    text-align: center;
+    margin: auto;
+}
+
+#customer-list {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+#customer-lister {
+    margin: 0;
+    width: max-content;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#customer-lister > li {
+    width: max-content;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.first-ul {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5px 10px 20px 5px;
+}
+
+.first-ul li, .first-ul li ul {
+    margin-top: 5px;
+}
+
+.empty i {
+    color: darkgoldenrod;
+    font-style: normal;
+}
+
+.bool {
+    color: steelblue;
+}
+
+.null {
+    color: darkolivegreen;
+}
+
+.first-ul * {
+    font-size: 12px;
+    font-family: 'FiraCodeLight', sans-serif;
+    letter-spacing: -1px;
+}
+
+.first-ul li span:first-of-type {
+    color: violet;
+}
+
+#customer-lister > li ul {
+    margin-left: 10px;
+}
+
+#customer-lister > li > span {
+    padding: 1px 5px 3px;
+    background-color: steelblue;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+#customer-lister li span small {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+#map {
+    width: 100%;
+    height: calc(100% - 292px);
+    overflow: hidden;
+    background: transparent!important;
+    border-radius: 8px;
+}
+
+.leaflet-control-attribution {
+    display: none;
+}
+
+#providers-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 22px);
+    height: 259px;
+    border: 1px solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
+
+#customer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#search-coords-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+#to-list.hidden {
+    display: none!important;
+}
+
+#to-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: calc(100% - 2px);
+    position: absolute;
+    top: calc(100% - 12px);
+    left: 0;
+    z-index: 2;
+    margin: 0;
+    border: 1px solid;
+    border-top: unset;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#to-list > li {
+    font-size: 12px;
+    cursor: pointer;
+    width: calc(100% - 20px);
+    padding: 5px 10px;
+}
+
+#to-list > li:not(:last-of-type) {
+    border-bottom: 1px solid;
+}
+
+#customer-list h4 {
+    margin-top: 0;
+    font-size: 14px;
+    padding: 1px 5px 3px;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#customer-first h4,
+#customer-fifth h4 {
+    background-color: steelblue;
+}
+
+#customer-second h4,
+#customer-sixth h4 {
+    background-color: darkgoldenrod;
+}
+
+#customer-third h4,
+#customer-seventh h4 {
+    background-color: darkolivegreen;
+}
+
+#customer-fourth h4 {
+    background-color: darkred;
+}
+
+.customer-checks, .no-data-customer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: max-content;
+    padding: 5px 10px;
+    font-size: 12px;
+}
+
+.customer-icons {
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+#customer-list > div {
+    margin: 10px 0;
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.5);
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-radius: 6px;
+}
+
+#customer-list > div > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+.customer-checks:last-of-type, .no-data-customer:last-of-type {
+    margin-bottom: 10px;
+}
+
+.customer-checks > span {
+    text-transform: capitalize;
+}
+
+.steps-title {
+    font-size: 14px;
+    font-family: 'evolve-bold', sans-serif;
+    margin-left: 10px;
+    text-decoration: underline;
+    text-transform: capitalize;
+}

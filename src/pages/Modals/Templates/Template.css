@@ -1,0 +1,390 @@
+#settings-left-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+}
+
+#settings-left-container > .inputs.input-ins {
+    width: calc(100% - 10px);
+    margin-right: 10px;
+}
+
+.search-input-label {
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    position: relative;
+}
+
+.search-input-label input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid;
+    padding: 5px 30px 5px 5px;
+    font-size: inherit;
+    font-family: 'evolve-thin', sans-serif;
+    opacity: 0.7;
+    outline: none;
+}
+
+.icon-search {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 7px;
+    top: 6px;
+    opacity: 0.5;
+}
+
+#settings-nav {
+    margin: 12px 10px 0 0;
+    width: calc(100% - 10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: calc(100% - 38px);
+    overflow-y: auto;
+}
+
+#settings-frame {
+    width: calc(70% - 10px);
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#settings-btns-container {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    height: 41px;
+}
+
+#settings-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100% - 51px);
+    margin-bottom: 10px;
+}
+
+#settings-nav > li {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+    font-family: 'evolve-bold', sans-serif;
+}
+
+#settings-nav > li > span {
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px;
+}
+
+.settings-chevron {
+    width: 13px;
+    height: 12px;
+    position: absolute;
+    transform-origin: 50% 50%;
+    transform: rotate(0);
+    transition: all linear 0.2s;
+    left: 0px;
+    top: 3px;
+}
+
+#settings-nav > li.checked .settings-chevron {
+    transform: rotate(90deg);
+}
+
+#settings-nav > li:hover > span, #settings-nav > li.checked > span {
+    text-decoration: underline;
+}
+
+#settings-nav > li.checked > ul {
+    display: block;
+}
+
+#settings-nav > li > ul {
+    padding-left: 24px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    cursor: default;
+    display: none;
+}
+
+#settings-nav > li > ul > li {
+    font-family: 'evolve-regular', sans-serif;
+    font-size: 12px;
+    margin: 5px 0;
+    cursor: pointer;
+    opacity: 0.7;
+    display: flex;
+}
+
+#settings-content > h3 {
+    margin: 0 0 10px 0;
+    width: 100%;
+    height: 23px;
+}
+
+#settings-content > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: calc(100% - 33px);
+    overflow-y: auto;
+}
+
+#settings-content > div > fieldset, #stats-container fieldset {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 0 0 10px 0;
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+    position: relative;
+}
+
+#settings-content > div > fieldset li {
+    font-size: 14px;
+    margin-bottom: 4px;
+    opacity: 0.7;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#settings-content > div > fieldset > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0;
+}
+
+#settings-content > div > fieldset > legend, #stats-container fieldset legend {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.key-name {
+    opacity: 0.7;
+}
+
+.sample {
+    height: 18px;
+    min-width: 26px;
+    display: flex;
+}
+
+.sample.shadow {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.sample.border-color {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.themes-logos {
+    width: 60px;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    z-index: 2;
+}
+
+#settings-content > div > fieldset .inputs label, #stats-container fieldset .inputs label {
+    font-size: 14px;
+}
+
+#settings-content > div > fieldset .inputs {
+    margin-bottom: 10px;
+}
+
+#settings-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#settings-content label:not(.inline), #stats-container label:not(.inline) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+}
+
+#settings-content label:not(.inline) input:not([type="radio"]):not([type="checkbox"]) {
+    background-color: transparent;
+}
+
+#settings-content label:not(.inline) input:not([type="radio"]):not([type="checkbox"]), #settings-content label:not(.inline) select, #stats-container label:not(.inline) select {
+    border: none;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+#settings-content label:not(.inline) select option, #stats-container label:not(.inline) select option {
+    background-color: inherit;
+}
+
+#settings-content label:not(.inline) input:not([type="radio"]):not([type="checkbox"]):not([type="password"]), #settings-content label:not(.inline) select, #stats-container label:not(.inline) select {
+    width: 100%;
+    padding: 5px 0;
+}
+
+#settings-content label:not(.inline) input[type=password] {
+    width: calc(100% - 20px);
+    padding: 5px 20px 5px 0;
+}
+
+#inline-fieldset > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#inline-fieldset .inputs:not(:first-of-type) {
+    margin-left: 10px;
+}
+
+#inline-fieldset .inputs {
+    width: 100%;
+}
+
+.icon-eye-blocked, .icon-eye {
+    position: absolute;
+    cursor: pointer;
+    bottom: 15px;
+    right: 0;
+    width: 16px;
+}
+
+.settings-users li {
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.settings-users li:not(:last-of-type) {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+.settings-users p {
+    width: 60%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    margin: 0!important;
+    font-family: 'evolve-bold', sans-serif;
+}
+
+.settings-users small:first-of-type {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: right;
+}
+
+.settings-users small:nth-child(3) {
+    margin-top: 5px;
+}
+
+.settings-users small:not(:first-of-type) {
+    width: 100%;
+}
+
+.settings-users small b {
+    font-size: inherit;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.settings-users small b:hover {
+    letter-spacing: 0.01em;
+    text-decoration: underline;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#shortcuts-list > li {
+    justify-content: space-between!important;
+    width: calc(100% - 10px);
+    padding: 5px;
+}
+
+.shortcuts-icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.shortcuts-icons li {
+    background-color: gold;
+    margin: 0 3px;
+    padding: 3px;
+    border-radius: 4px;
+    color: #141414;
+    font-family: 'evolve-bold', sans-serif;
+    font-size: 12px!important;
+}
+
+#shortcuts-list > li:not(:last-of-type) {
+    border-bottom: 1px solid;
+}
+
+#stats-container {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 6px;
+    height: 500px;
+}
+
+#charts-container {
+    height: 256px;
+}
+
+#charts-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+    height: 30px;
+}
+
+.charts-details-cell {
+    font-size: inherit;
+    margin: 20px;
+}
+
+.charts-details-cell span {
+    font-family: 'evolve-bold', sans-serif;
+}

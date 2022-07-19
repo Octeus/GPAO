@@ -1,0 +1,84 @@
+i.bad-format {
+    background-color: firebrick;
+    color: #fff;
+}
+
+i.good-format {
+    background-color: grey;
+    color: #141414;
+}
+
+.errors-color {
+    color: firebrick;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#email-container {
+    position: relative;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 6px;
+    min-height: 535px;
+    max-height: 580px;
+    overflow-y: auto;
+}
+
+#after-sent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#after-sent p {
+    padding: 20px 40px;
+    border-radius: 6px;
+    border: 1px solid;
+}
+
+#email-container label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#email-container label > span:first-child {
+    opacity: 0.5;
+}
+
+#email-container .fake-input, #email-container label:not(.datalist-label) input, #email-container textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 5px 0;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#email-container textarea {
+    height: 160px;
+}
+
+.btns-emails-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+}

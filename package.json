@@ -1,0 +1,223 @@
+{
+  "build": {
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Octeus",
+        "repo": "OcteusDataCommander"
+      }
+    ],
+    "appId": "com.octeus.datacommanderapp",
+    "productName": "OCTEUS DataCommander",
+    "copyright": "Copyright © year ${author}",
+    "mac": {
+      "category": "public.app-category.developper-tools",
+      "icon": "public/assets/media/img/favicon.png"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "snap",
+        "rpm"
+      ],
+      "category": "Utility",
+      "icon": "public/assets/media/img/favicon.png"
+    },
+    "win": {
+      "publish": [
+        "github"
+      ],
+      "target": {
+        "target": "nsis",
+        "arch": [
+          "ia32",
+          "x64"
+        ]
+      },
+      "icon": "public/assets/media/img/favicon.png"
+    },
+    "nsis": {
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "fileAssociations": [
+      {
+        "ext": "osdc",
+        "name": "DataCommander File",
+        "role": "Editor"
+      }
+    ]
+  },
+  "name": "octeus_datacommander",
+  "description": "OCTEUS DataCommander",
+  "productName": "OCTEUS DataCommander",
+  "version": "1.0.0",
+  "private": true,
+  "main": "public/electron.js",
+  "keywords": [
+    "Octeus",
+    "Solutions",
+    "DataCommander"
+  ],
+  "author": {
+    "name": "OCTEUS",
+    "email": "infos@octeus.fr"
+  },
+  "scripts": {
+    "react:start": "node reactIgnitition && react-scripts start",
+    "react:build": "react-scripts build",
+    "react:test": "react-scripts test",
+    "react:eject": "react-scripts eject",
+    "publish": "electron-builder --win -p always",
+    "preinstall": "npx npm-force-resolutions",
+    "test": "npm start",
+    "start": "electron .",
+    "rebuild": "electron-rebuild",
+    "postinstall": "electron-builder install-app-deps",
+    "distP": "electron-builder --win portable --x64",
+    "distP:32": "electron-builder --win portable --ia32",
+    "dist": "electron-builder --win",
+    "dist:linux": "electron-builder --linux",
+    "dist:mac": "electron-builder --mac",
+    "pack": "electron-builder --dir",
+    "jsdoc": "node newDocs"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://vcs.quanticalsolutions.com/Fred/OcteusDataCommander"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://vcs.quanticalsolutions.com/Fred/OcteusDataCommander/issues"
+  },
+  "homepage": "./",
+  "devDependencies": {
+    "@babel/preset-react": "^7.13.13",
+    "@faker-js/faker": "^6.0.0-alpha.7",
+    "docdash": "^1.2.0",
+    "electron": "10.1.3",
+    "electron-builder": "*",
+    "electron-installer-windows": "*",
+    "electron-packager": "*",
+    "electron-rebuild": "^2.3.5",
+    "electron-winstaller": "^5.0.0",
+    "gulp": "^4.0.2",
+    "jsdoc-to-markdown": "^7.0.1"
+  },
+  "jshintConfig": {
+    "undef": true,
+    "unused": true,
+    "esversion": 6,
+    "globals": {
+      "MY_GLOBAL": true,
+      "$": true,
+      "document": true,
+      "navigation": true,
+      "require": true,
+      "__dirname": true,
+      "localStorage": true,
+      "console": true,
+      "setTimeout": true,
+      "window": true,
+      "exports": true,
+      "process": true
+    }
+  },
+  "resolutions": {
+    "minimist": "^1.2.5"
+  },
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "beautify": "0.0.8",
+    "chart.js": "^3.7.1",
+    "custom-electron-titlebar": "^3.2.6",
+    "dicom-parser": "^1.8.7",
+    "dns2": "^2.0.0",
+    "dotenv": "^8.2.0",
+    "drivelist": "^9.2.4",
+    "easy-ftp": "^0.4.2",
+    "electron-custom-dialog": "^1.0.0",
+    "electron-fetch": "^1.4.0",
+    "electron-is-dev": "^2.0.0",
+    "electron-online": "^1.0.0",
+    "electron-reload": "^1.5.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "folder-encrypt": "^1.1.7",
+    "fs-extra": "^9.1.0",
+    "ftp": "^0.3.10",
+    "generic-stdout-parser": "^1.0.1",
+    "highlight.js": "^11.5.0",
+    "jquery": "^3.6.0",
+    "jsdoc": "^3.6.10",
+    "jsdom": "^16.5.3",
+    "leaflet": "^1.7.1",
+    "node-disk-info": "^1.2.0",
+    "node-notifier": "^9.0.1",
+    "node-pty": "^0.10.1",
+    "nodemailer": "^6.7.2",
+    "pdfkit": "^0.12.1",
+    "qrcode": "^1.4.4",
+    "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
+    "react-dom": "^17.0.2",
+    "react-highlight": "^0.14.0",
+    "react-markdown": "^8.0.0",
+    "react-moment": "^1.1.1",
+    "react-scripts": "4.0.3",
+    "remark-gfm": "^3.0.1",
+    "scandir": "^0.1.2",
+    "shell": "^0.5.0",
+    "simple-excel-to-json": "^2.3.0",
+    "ssh2": "^1.8.0",
+    "svg-to-pdfkit": "^0.1.8",
+    "web-vitals": "^1.0.1",
+    "xml-formatter": "^2.4.0",
+    "xterm": "^4.12.0",
+    "xterm-addon-attach": "^0.6.0",
+    "xterm-addon-fit": "^0.5.0",
+    "xterm-addon-search": "^0.8.0",
+    "xterm-addon-web-links": "^0.4.0"
+  }
+}

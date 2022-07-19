@@ -1,0 +1,61 @@
+#phone-numbers-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#phone-numbers-container > fieldset {
+    border-radius: 6px;
+}
+
+.phone-numbers {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.phone-numbers li {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+}
+
+.phone-numbers li p {
+    font-size: inherit;
+    width: 70%;
+}
+
+.phone-numbers li small:first-of-type {
+    width: 30%;
+    text-align: right;
+}
+
+.phone-numbers li:not(:last-of-type) {
+    border-bottom: 1px solid;
+    padding-bottom: 5px;
+}
+
+.phone-numbers li:not(:first-of-type) {
+    padding-top: 5px;
+}
+
+.phone-numbers li small:last-of-type {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.phone-numbers li small b {
+    font-size: inherit;
+    font-family: 'evolve-bold', sans-serif;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.phone-numbers li small b:hover {
+    letter-spacing: 0.02em;
+    text-decoration: underline;
+}

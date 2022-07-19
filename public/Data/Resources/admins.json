@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "role": "octeus",
+        "pseudo": "fred.geffray@gmail.com",
+        "nom": "Geffray",
+        "prenom": "Frédéric",
+        "fonction": "Octeus DSI",
+        "tel": "+33662687011",
+        "derniere_connexion": "2022-03-26 18:32:52",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-25 19:47:02"
+    },
+    {
+        "id": "2",
+        "role": "operator",
+        "pseudo": "nadine@hotmail.fr",
+        "nom": "Dupont",
+        "prenom": "Nadine",
+        "fonction": "Tessi operator",
+        "tel": "+33625489578",
+        "derniere_connexion": "2020-04-30 10:29:51",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-25 19:47:02"
+    },
+    {
+        "id": "3",
+        "role": "octeus",
+        "pseudo": "octeus3@gmail.com",
+        "nom": "Leonelli",
+        "prenom": "Paul",
+        "fonction": "Octeus CEO",
+        "tel": "+33750042849",
+        "derniere_connexion": "2020-04-17 11:19:34",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-25 19:47:02"
+    },
+    {
+        "id": "4",
+        "role": "octeus",
+        "pseudo": "le.br@free.fr",
+        "nom": "Lecante",
+        "prenom": "Bruno",
+        "fonction": "Octeus Employee",
+        "tel": "+33707576270",
+        "derniere_connexion": "2020-01-28 07:01:56",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-25 19:47:02"
+    },
+    {
+        "id": "5",
+        "role": "octeus",
+        "pseudo": "sandrine.reby@hotmail.fr",
+        "nom": "Reby",
+        "prenom": "Sandrine",
+        "fonction": "Octeus Employee",
+        "tel": "+33658684616",
+        "derniere_connexion": "2020-08-28 11:36:16",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-25 19:47:02"
+    },
+    {
+        "id": "7",
+        "role": "design",
+        "pseudo": "marionlaplagne24@gmail.com",
+        "nom": "Laplagne",
+        "prenom": "Marion",
+        "fonction": "Octeus Employee",
+        "tel": "+33673547996",
+        "derniere_connexion": "2020-02-17 20:18:30",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-28 18:48:32"
+    },
+    {
+        "id": "8",
+        "role": "octeus",
+        "pseudo": "sabine.gagliardini@hotmail.fr",
+        "nom": "Gargliardini",
+        "prenom": "Sabine",
+        "fonction": "Octeus Employee",
+        "tel": "+33686777836",
+        "derniere_connexion": "2020-04-27 11:07:24",
+        "password": "$2y$12$04ADDmrPb7H5839U9iaqBu2XE/Mo.78nEAh1sqxc7HbU.htVvo0Wq",
+        "date": "2019-12-28 18:48:32"
+    }
+]

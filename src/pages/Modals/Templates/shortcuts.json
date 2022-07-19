@@ -1,0 +1,82 @@
+[
+  {
+    "desc" : "Copy",
+    "shortcut": {
+      "mac": [
+        "Cmd",
+        "C"
+      ],
+      "win": [
+        "Ctrl",
+        "C"
+      ]
+    }
+  },
+  {
+    "desc" : "Paste",
+    "shortcut": {
+      "mac": [
+        "Cmd",
+        "V"
+      ],
+      "win": [
+        "Ctrl",
+        "V"
+      ]
+    }
+  },
+  {
+    "desc" : "Cut",
+    "shortcut": {
+      "mac": [
+        "Cmd",
+        "X"
+      ],
+      "win": [
+        "Ctrl",
+        "X"
+      ]
+    }
+  },
+  {
+    "desc" : "Select All",
+    "shortcut": {
+      "mac": [
+        "Cmd",
+        "A"
+      ],
+      "win": [
+        "Ctrl",
+        "A"
+      ]
+    }
+  },
+  {
+    "desc" : "Undo",
+    "shortcut": {
+      "mac": [
+        "Cmd",
+        "Z"
+      ],
+      "win": [
+        "Ctrl",
+        "Z"
+      ]
+    }
+  },
+  {
+    "desc" : "Redo",
+    "shortcut": {
+      "mac": [
+        "Cmd",
+        "Shift",
+        "Z"
+      ],
+      "win": [
+        "Ctrl",
+        "Shift",
+        "Z"
+      ]
+    }
+  }
+]

@@ -1,0 +1,160 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal > div {
+    padding: 10px 20px;
+    border-radius: 6px;
+    width: 500px;
+    max-width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#noModal {
+    display: none;
+}
+
+.files-ok {
+    margin: 0;
+    color: green;
+    text-align: center;
+    width: 100%;
+}
+
+.files-nok {
+    color: firebrick;
+    font-style: italic;
+    margin: 0 0 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.modal-title {
+    margin: 0 0 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.modal-logo {
+    width: 40px;
+    margin-right: 10px;
+}
+
+#files-container {
+    width: 100%;
+}
+
+#files-container li {
+    font-size: 14px;
+}
+
+.modal-none {
+    display: none!important;
+}
+
+.modal-SimpleModal {
+    width: 100%;
+    height: 100%;
+}
+
+.modal-Settings #modal-center {
+    width: 700px;
+    height: 500px;
+    max-width: 700px;
+    max-height: 500px;
+    position: relative;
+}
+
+.modal-SimpleModal #modal-center {
+    max-width: unset;
+}
+
+.modal-calculator {
+    width: 250px!important;
+}
+
+.modal-SimpleModal > div, .modal-Settings > div {
+    padding: 0;
+    overflow: hidden;
+    border-radius: 6px;
+    position: absolute;
+}
+
+.modal-SimpleModal .modal-title, .modal-Settings .modal-title {
+    padding: 10px 10px 10px 20px;
+    margin: 0;
+    width: calc(100% - 30px);
+    justify-content: space-between;
+    user-select: none;
+}
+
+.modal-Settings .modal-title {
+    height: 28px;
+}
+
+.modal-SimpleModal .modal-title h3, .modal-Settings .modal-title h3 {
+    margin: 0;
+}
+
+.modal-SimpleModal .modal-title h3 svg, .modal-Settings .modal-title h3 svg {
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.modal-SimpleModal .modal-content, .modal-Settings .modal-content {
+    padding: 10px;
+    width: calc(100% - 20px);
+}
+
+.modal-Settings .modal-content {
+    height: calc(100% - 68px);
+    max-height: calc(100% - 68px);
+}
+
+.modal-title .headerSoloIcon {
+    margin: 0!important;
+}
+
+#settings-confirm-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#settings-confirm {
+    padding: 10px 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#settings-confirm-btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}

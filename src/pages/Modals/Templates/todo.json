@@ -1,0 +1,368 @@
+{
+    "create": [
+        {
+            "text": "Create customer strict DataBase",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Create customer dynamic DataBase",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Implement customer's avatar picture",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Implement travels if exist",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Implement Ice contacts",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Upload medical documents and images",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Prepare card design",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        }
+    ],
+    "update": [
+        {
+            "text": "Update strict DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update strict DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update dynamic DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update medical documents and images",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        }
+    ],
+    "design": [
+        {
+            "text": "Update strict DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update strict DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update dynamic DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update medical documents and images",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        }
+    ],
+    "delivery": [
+        {
+            "text": "Update strict DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update strict DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update dynamic DataBase if necessary",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        },
+        {
+            "text": "Update medical documents and images",
+            "done": 0,
+            "steps": [
+                {
+                    "text": "Test it",
+                    "done": false
+                },
+                {
+                    "text": "Test it",
+                    "done": false
+                }
+            ]
+        }
+    ]
+}

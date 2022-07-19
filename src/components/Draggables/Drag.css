@@ -1,0 +1,552 @@
+.vertical, .left, .right {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+
+.selection * {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.left .drag-title, .right .drag-title {
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    height: 25px;
+    overflow: hidden;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.sides-container {
+    margin: 10px;
+    width: calc(100% - 40px);
+    height: calc(100% - 66px);
+    padding: 10px;
+    border: 1px solid;
+}
+
+.left .draggable-element {
+    right: 0;
+}
+
+.right .draggable-element {
+    left: 0;
+}
+
+.left .draggable-element,
+.right .draggable-element {
+    background-color: transparent;
+    width: 5px;
+    height: 100%;
+    z-index: 3;
+    top: 0;
+    position: absolute;
+    cursor: col-resize;
+}
+
+.footerDrag {
+    position: absolute;
+    left: 20px;
+    width: calc(100% - 40px);
+    height: 300px;
+    bottom: 30px;
+    border-top-style: solid;
+    border-top-width: 1px;
+    z-index: 2;
+    cursor: default;
+}
+
+/*.footer-terminal {
+    height: 386px;
+}*/
+
+.nano-windows {
+    position: relative;
+}
+
+.nano-windows .modals {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    border-style: solid;
+    border-width: 1px;
+    font-size: 14px;
+    border-radius: 6px;
+    width: max-content;
+    right: 5px;
+    z-index: 3;
+}
+
+.footerNanoTitle {
+    padding: 10px;
+}
+
+.footerNanoContent {
+    padding: 10px;
+}
+
+.nano-container {
+    border-radius: 6px;
+    overflow: hidden;
+    min-width: 200px;
+    position: relative;
+    z-index: 5;
+}
+
+.nano-windows .modals::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: inherit;
+    border-color: inherit;
+    transform-origin: 50% 50%;
+    position: absolute;
+    transform: rotate(45deg);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    z-index: 4;
+    right: 10px;
+    top: calc(100% - 5px);
+}
+
+.vertical .draggable-element {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: row-resize;
+}
+
+.drag-title * {
+    font-size: inherit;
+}
+
+.draggable-element {
+    min-height: 24px;
+}
+
+#logs-container {
+    width: 100%;
+}
+
+#logs-number, #device-title {
+    padding: 5px 10px;
+    width: calc(100% - 20px);
+    font-size: 14px;
+    height: 41px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#logs-number > div:first-of-type {
+    margin-left: 20px;
+}
+
+#logs-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+    padding: 0 10px;
+    height: calc(100% - 57px);
+    overflow-y: auto;
+}
+
+#logs-list li {
+    margin: 0;
+    font-size: 14px;
+}
+
+.log-error {
+    color: firebrick;
+}
+
+.log-good {
+    color: olivedrab;
+}
+
+#logs-list li.hidden {
+    display: none!important;
+}
+
+#logs-list li pre {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.8em;
+}
+
+#todo-container {
+    padding: 10px;
+}
+
+#todo-container, #device-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 12px;
+}
+
+#todo-title {
+    color: olivedrab;
+}
+
+#device-title {
+    color: gold;
+}
+
+#device-title > span {
+    color: gold;
+}
+
+#logs-number > span {
+    color: steelblue;
+}
+
+#logs-number > span, #device-title > span {
+    margin-right: 20px;
+    font-size: 18px;
+    margin-bottom: 0!important;
+}
+
+#todo-title, #device-title > span, #logs-number > span {
+    font-weight: bold;
+    height: 22px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#todo-list, #todo-list > li > ul, #devices-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#todo-list {
+    height: calc(100% - 30px);
+    overflow-y: auto;
+    width: calc(100% - 10px);
+    padding: 0 10px;
+}
+
+#devices-list {
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    width: calc(100% - 30px);
+    padding: 0 10px 0 20px;
+}
+
+#todo-list > li > ul, #devices-list > li > ul {
+    width: 100%;
+    position: relative;
+}
+
+#todo-list > li {
+    color: darkorchid;
+}
+
+#devices-list > li {
+    color: #fff;
+}
+
+#todo-list > li, #devices-list > li {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#devices-list > li > ul > li {
+    color: grey;
+}
+
+#todo-list > li > ul > li, #devices-list > li > ul > li {
+    font-size: 12px;
+    margin: 8px 0 8px 20px;
+    position: relative;
+}
+
+#devices-list > li > ul > li > span {
+    font-family: 'evolve-bold', sans-serif;
+}
+
+#todo-list > li > ul::before, #devices-list > li > ul::before {
+    content: "";
+    height: calc(100% - 31px);
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 5px;
+    border-left: 1px dotted grey;
+}
+
+#devices-list > li > b {
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: normal;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#todo-list > li > ul > li::before, #devices-list > li > ul > li::before {
+    content: "";
+    width: 9px;
+    position: absolute;
+    z-index: 1;
+    top: calc(50% - 1px);
+    left: -15px;
+    border-top: 1px dotted grey;
+}
+
+#todo-list > li, #devices-list > li {
+    flex-direction: column;
+}
+
+#todo-list > li, #todo-list > li > ul > li, #devices-list > li, #devices-list > li > ul > li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    font-family: monospace;
+}
+
+#devices-list > li > ul > li, #todo-list > li > ul > li {
+    align-items: baseline;
+}
+
+#todo-list > li::before {
+    background-color: steelblue;
+}
+
+#todo-list > li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 4px;
+    left: -16px;
+}
+
+#todo-list > li .complete {
+    color: olivedrab;
+}
+
+.octeus-original {
+    font-size: 12px;
+    font-family: 'evolve-bold', sans-serif;
+    padding: 5px 10px;
+    margin-left: 10px;
+    background-color: olivedrab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    border-radius: 3px;
+}
+
+#footerNano-2 .footerNanoContent {
+    padding: 0;
+}
+
+#footerNano-2 ul li {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+#footerNano-2 ul li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#projects-list {
+    max-height: 250px;
+}
+
+#projects-list, #design-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#design-list {
+    max-height: 100%;
+}
+
+#projects-list > li {
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: calc(100% - 22px);
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin: 3px 0;
+    font-weight: bold;
+    position: relative;
+}
+
+#projects-list > li small {
+    margin-top: 5px;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.project-create {
+    border: 1px solid steelblue;
+    background-color: rgba(70, 130, 180, 0.3);
+}
+
+#projects-list > li::after {
+    font-weight: bold;
+    position: absolute;
+    top: -4px;
+    right: -1px;
+    z-index: 1;
+    border-radius: 500px;
+    font-size: 12px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #fff;
+    box-shadow: -4px 4px 6px rgba(0, 0,0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-create::after {
+    content: "N";
+    background-color: steelblue;
+}
+
+.project-update::after {
+    content: "U";
+    background-color: gold;
+}
+
+.project-update {
+    border: 1px solid gold;
+    background-color: rgba(255, 215, 0, 0.3);
+}
+
+.befores-2 {
+    transform: unset!important;
+    position: relative;
+    top: 2px;
+}
+
+.locations-ins {
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    border-bottom: 2px solid;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+#providers-list .inputs {
+    width: 100%;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+
+.template-name {
+    padding: 1px 5px 3px;
+    background-color: steelblue;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+#design-list > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+}
+
+#design-list > div > ul {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-around;
+    margin: 5px 10px 20px 5px;
+    min-width: calc(100% - 35px);
+    cursor: pointer;
+}
+
+#design-list > div > ul * {
+    cursor: pointer;
+}
+
+#design-list > div > ul li {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 12px;
+}
+
+#design-list > div > ul li span {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5px;
+    background-color: #fff;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+#design-list > div > ul li span, #design-list > div > ul li svg {
+    width: 100%;
+}
+
+.customer-counters {
+    font-size: 14px;
+    margin: 0 10px 10px;
+}
+
+.customer-counters i {
+    font-size: inherit;
+}
+
+input[name="devices-item"] {
+    margin-right: 10px!important;
+    cursor: pointer;
+}
+
+input[name="devices-item"]::before {
+    box-shadow: inset 1em 1em gold!important;
+}

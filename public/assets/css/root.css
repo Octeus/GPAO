@@ -1,0 +1,46 @@
+:root {
+    --default-theme-bg-primary: #f7f7f7;
+    --default-theme-bg-secondary: #d1d1d1;
+    --default-theme-bg-hover: #c1c1c1;
+    --default-theme-color-primary: #3c3c3c;
+    --default-theme-color-secondary: #6d6d6d;
+    --default-theme-border-color: #191919;
+    --default-theme-exit-heading-bg: #ccc;
+    --default-theme-opacity: rgba(255, 255, 255, 0.5);
+
+    --dark-theme-bg-primary: #191919;
+    --dark-theme-bg-secondary: #1f1f1f;
+    --dark-theme-bg-hover: #363636;
+    --dark-theme-color-primary: #f7f7f7;
+    --dark-theme-color-secondary: #a1a1a1;
+    --dark-theme-border-color: #5d5d5d;
+    --dark-theme-exit-heading-bg: #191919;
+    --dark-theme-opacity: rgba(0, 0, 0, 0.5);
+
+    --ocean-theme-bg-primary: #041111;
+    --ocean-theme-bg-secondary: #111f28;
+    --ocean-theme-bg-hover: #264659;
+    --ocean-theme-color-primary: #457b9d;
+    --ocean-theme-color-secondary: #a8cfdd;
+    --ocean-theme-border-color: #ccc;
+    --ocean-theme-exit-heading-bg: #041111;
+    --ocean-theme-opacity: rgba(0, 0, 0, 0.5);
+
+    --dracula-theme-bg-primary: #110202;
+    --dracula-theme-bg-secondary: #161616;
+    --dracula-theme-bg-hover: #404040;
+    --dracula-theme-color-primary: #8f0000;
+    --dracula-theme-color-secondary: #fff;
+    --dracula-theme-border-color: #110207;
+    --dracula-theme-exit-heading-bg: #110202;
+    --dracula-theme-opacity: rgba(0, 0, 0, 0.5);
+
+    --unicorn-theme-bg-primary: #f7e9f3;
+    --unicorn-theme-bg-secondary: #aaeae8;
+    --unicorn-theme-bg-hover: #ebc7e1;
+    --unicorn-theme-color-primary: #cbb272;
+    --unicorn-theme-color-secondary: #af7ce0;
+    --unicorn-theme-border-color: #abe7e2;
+    --unicorn-theme-exit-heading-bg: #aaeae8;
+    --unicorn-theme-opacity: rgba(255, 255, 255, 0.5);
+}

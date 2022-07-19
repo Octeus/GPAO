@@ -1,0 +1,279 @@
+#right-aside {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 20px;
+    height: calc(100% - 60px);
+    font-size: 12px;
+    top: 30px;
+    right: 0;
+    z-index: 2;
+}
+
+#right-aside > div {
+    width: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    position: relative;
+ }
+
+#right-aside > div > ul {
+    transform: rotate(90deg) translateY(-140px) translateX(-20px);
+    transform-origin: 0 100%;
+    margin: 0;
+    height: 20px;
+    position: absolute;
+    top: 0;
+}
+
+#right-aside > div > ul li {
+    padding: 0 10px;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-sides-container {
+    width: 100%;
+    height: 100%;
+}
+
+#remote-list, #database-list {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;
+}
+
+#remote-lister, #database-lister {
+    margin: 0;
+    width: max-content;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#remote-lister li, #database-lister li {
+    width: max-content;
+    margin-bottom: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#remote-lister li span, #database-lister li span {
+    font-size: 14px!important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+#remote-lister li span small, #database-lister li span small {
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.remote-icons {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.remote-folder path {
+    fill: gold!important;
+}
+
+.remote-file path {
+    fill: darkorchid!important;
+}
+
+#right-aside ul li span {
+    font-size: 12px;
+    cursor: inherit;
+}
+
+#right-aside .drags {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 250px;
+    border-left-style: solid;
+    border-left-width: 1px;
+    height: 100%;
+}
+
+#right-aside .befores {
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+}
+
+.right-windows {
+    position: relative;
+}
+
+.right-windows[data-title]:hover::before {
+    top: 31px;
+    right: 62px;
+    transform-origin: 100% 0;
+    transform: rotate(-90deg);
+}
+
+.right-windows[data-title]:hover::after {
+    top: calc(100% + 10px);
+    left: 53px;
+    transform-origin: 0 50%;
+    transform: rotate(225deg);
+}
+
+#right-aside > div > ul {
+    z-index: 3;
+}
+
+#back-to-parent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 1px 5px 3px 5px;
+    background-color: steelblue;
+    color: #fff;
+    border-radius: 3px;
+}
+
+#back-to-parent svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    color: inherit;
+}
+
+#back-to-parent svg path {
+    fill: currentColor;
+}
+
+#empty-folder, #empty-database {
+    font-size: 12px!important;
+    text-align: center;
+    width: 100%!important;
+}
+
+#empty-folder i, #empty-database i {
+    margin: auto;
+    font-size: inherit;
+}
+
+.remote-refresh {
+    margin-left: 12px;
+    top: 0;
+    margin-right: 0;
+    border-left: 1px solid #3c3c3c;
+    padding-left: 8px;
+    cursor: pointer;
+}
+
+.sub-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 5px 0;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px 10px 10px 0;
+    border-radius: 6px;
+}
+
+#database-lister > li {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    font-size: 12px!important;
+}
+
+.sub-lister, .sub-lister * {
+    font-size: 12px!important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline!important;
+    width: 100%;
+    margin-bottom: 0!important;
+}
+
+.sub-lister i {
+    font-family: 'evolve-bold', sans-serif;
+    margin: 2px 2px 2px 10px;
+}
+
+#database-lister li span > b {
+    font-size: inherit;
+}
+
+#database-lister > li > span {
+    padding: 1px 5px 3px;
+    background-color: steelblue;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 1200px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+    background-color: steelblue;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table td {
+    text-align: center;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #2d2d2d;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: #3c3c3c;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid steelblue;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: steelblue;
+}
+
+#design-list > i {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,251 @@
+/*========================= Default =============================*/
+.default.bg {
+    background-color: var(--default-theme-bg-primary);
+}
+
+.default.bg-2 {
+    background-color: var(--default-theme-bg-secondary);
+}
+
+.default.color {
+    color: var(--default-theme-color-primary);
+}
+
+.default.color-2 {
+    color: var(--default-theme-color-secondary);
+}
+
+.default.border-color {
+    border-color: var(--default-theme-border-color);
+}
+
+.default.exitBG {
+    border-color: var(--default-theme-exit-heading-bg);
+}
+
+.default .selected {
+    background-color: var(--default-theme-bg-primary)!important;
+    color: #fff;
+}
+
+.default .hover:not(.selected ):hover {
+    background-color: var(--default-theme-bg-hover)!important;
+    color: #fff;
+}
+
+.default [data-title]:hover::before {
+    background-color: var(--default-theme-bg-primary);
+    border-color: var(--default-theme-border-color);
+    color: var(--default-theme-color-secondary);
+}
+
+.default [data-title]:hover::after {
+    border-right-color: var(--default-theme-border-color);
+    border-bottom-color: var(--default-theme-border-color);
+    background-color: var(--default-theme-bg-primary);
+    color: var(--default-theme-color-secondary);
+}
+
+.default.opacity {
+    background-color: var(--default-theme-opacity);
+}
+
+/*========================= Dark =============================*/
+.dark.bg {
+    background-color: var(--dark-theme-bg-primary);
+}
+
+.dark.bg-2 {
+    background-color: var(--dark-theme-bg-secondary);
+}
+
+.dark.color {
+    color: var(--dark-theme-color-primary);
+}
+
+.dark.color-2 {
+    color: var(--dark-theme-color-secondary);
+}
+
+.dark.border-color {
+    border-color: var(--dark-theme-border-color);
+}
+
+.dark.exitBG {
+    border-color: var(--dark-theme-exit-heading-bg);
+}
+
+.dark .selected {
+    background-color: var(--dark-theme-bg-primary)!important;
+}
+
+.dark .hover:not(.selected ):hover {
+    background-color: var(--dark-theme-bg-hover)!important;
+}
+
+.dark [data-title]:hover::before {
+    background-color: var(--dark-theme-bg-primary);
+    border-color: var(--dark-theme-border-color);
+    color: var(--dark-theme-color-secondary);
+}
+
+.dark [data-title]:hover::after {
+    border-right-color: var(--dark-theme-border-color);
+    border-bottom-color: var(--dark-theme-border-color);
+    background-color: var(--dark-theme-bg-primary);
+    color: var(--dark-theme-color-secondary);
+}
+
+.dark.opacity {
+    background-color: var(--dark-theme-opacity);
+}
+
+/*========================= Ocean =============================*/
+.ocean.bg {
+    background-color: var(--ocean-theme-bg-primary);
+}
+
+.ocean.bg-2 {
+    background-color: var(--ocean-theme-bg-secondary);
+}
+
+.ocean.color {
+    color: var(--ocean-theme-color-primary);
+}
+
+.ocean.color-2 {
+    color: var(--ocean-theme-color-secondary);
+}
+
+.ocean.border-color {
+    border-color: var(--ocean-theme-border-color);
+}
+
+.ocean.exitBG {
+    border-color: var(--ocean-theme-exit-heading-bg);
+}
+
+.ocean .selected {
+    background-color: var(--ocean-theme-bg-primary)!important;
+}
+
+.ocean .hover:not(.selected ):hover {
+    background-color: var(--ocean-theme-bg-hover)!important;
+}
+
+.ocean [data-title]:hover::before {
+    background-color: var(--ocean-theme-bg-primary);
+    border-color: var(--ocean-theme-border-color);
+    color: var(--ocean-theme-color-secondary);
+}
+
+.ocean [data-title]:hover::after {
+    border-right-color: var(--ocean-theme-border-color);
+    border-bottom-color: var(--ocean-theme-border-color);
+    background-color: var(--ocean-theme-bg-primary);
+    color: var(--ocean-theme-color-secondary);
+}
+
+.ocean.opacity {
+    background-color: var(--ocean-theme-opacity);
+}
+
+/*========================= Dracula =============================*/
+.dracula.bg {
+    background-color: var(--dracula-theme-bg-primary);
+}
+
+.dracula.bg-2 {
+    background-color: var(--dracula-theme-bg-secondary);
+}
+
+.dracula.color {
+    color: var(--dracula-theme-color-primary);
+}
+
+.dracula.color-2 {
+    color: var(--dracula-theme-color-secondary);
+}
+
+.dracula.border-color {
+    border-color: var(--dracula-theme-border-color);
+}
+
+.dracula.exitBG {
+    border-color: var(--dracula-theme-exit-heading-bg);
+}
+
+.dracula .selected {
+    background-color: var(--dracula-theme-bg-primary)!important;
+}
+
+.dracula .hover:not(.selected ):hover {
+    background-color: var(--dracula-theme-bg-hover)!important;
+}
+
+.dracula [data-title]:hover::before {
+    background-color: var(--dracula-theme-bg-primary);
+    border-color: var(--dracula-theme-border-color);
+    color: var(--dracula-theme-color-secondary);
+}
+
+.dracula [data-title]:hover::after {
+    border-right-color: var(--dracula-theme-border-color);
+    border-bottom-color: var(--dracula-theme-border-color);
+    background-color: var(--dracula-theme-bg-primary);
+    color: var(--dracula-theme-color-secondary);
+}
+
+.dracula.opacity {
+    background-color: var(--dracula-theme-opacity);
+}
+
+/*========================= Unicorn =============================*/
+.unicorn.bg {
+    background-color: var(--unicorn-theme-bg-primary);
+}
+
+.unicorn.bg-2 {
+    background-color: var(--unicorn-theme-bg-secondary);
+}
+
+.unicorn.color {
+    color: var(--unicorn-theme-color-primary);
+}
+
+.unicorn.color-2 {
+    color: var(--unicorn-theme-color-secondary);
+}
+
+.unicorn.border-color {
+    border-color: var(--unicorn-theme-border-color);
+}
+
+.unicorn.exitBG {
+    border-color: var(--unicorn-theme-exit-heading-bg);
+}
+
+.unicorn .selected {
+    background-color: var(--unicorn-theme-bg-primary)!important;
+}
+
+.unicorn .hover:not(.selected ):hover {
+    background-color: var(--unicorn-theme-bg-hover)!important;
+}
+
+.unicorn [data-title]:hover::before {
+    background-color: var(--unicorn-theme-bg-primary);
+    border-color: var(--unicorn-theme-border-color);
+    color: var(--unicorn-theme-color-secondary);
+}
+
+.unicorn [data-title]:hover::after {
+    border-right-color: var(--unicorn-theme-border-color);
+    border-bottom-color: var(--unicorn-theme-border-color);
+    background-color: var(--unicorn-theme-bg-primary);
+    color: var(--unicorn-theme-color-secondary);
+}
+
+.unicorn.opacity {
+    background-color: var(--unicorn-theme-opacity);
+}

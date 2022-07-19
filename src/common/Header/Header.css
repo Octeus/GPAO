@@ -1,0 +1,130 @@
+header {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    font-size: 12px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+header ul li {
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+.header-icons {
+    width: 16px;
+    height: 16px;
+}
+
+header ul {
+    margin: 0;
+}
+
+header > ul:first-of-type {
+    padding-left: 20px;
+}
+
+header > ul:last-of-type {
+    padding-right: 0;
+}
+
+header > ul:first-of-type li {
+    /*padding: 0 5px 0 0;*/
+    font-size: 12px;
+}
+
+header > ul:first-of-type li:first-of-type {
+    font-weight: bold;
+}
+
+header > ul:last-of-type > li {
+    position: relative;
+}
+
+.headerSoloIcon[data-title]:hover::before {
+    bottom: -35px;
+    right: 6px;
+}
+
+.headerSoloIcon[data-title]:hover::after {
+    bottom: -17px;
+    right: 9px;
+    transform: rotate(-135deg);
+}
+
+.headerSoloIcon {
+    border-radius: 100px;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    margin: 0 5px 0 0;
+}
+
+.header-sep {
+    border-left-style: solid;
+    border-left-width: 1px;
+    padding: 0;
+    height: 16px;
+    margin: 7px 10px 7px 5px;
+}
+
+#header-settings-trigger {
+    position: fixed;
+    right: 26px;
+    top: 66px;
+    min-width: 150px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    display: none;
+}
+
+.displaySystemNanoModal {
+    display: block!important;
+}
+
+#header-settings-trigger li {
+    font-size: 14px;
+    margin: 2px 0;
+    padding: 5px 10px;
+}
+
+#access-to-crm {
+    height: 20px;
+    margin: 0 15px 0 5px;
+    font-size: 12px;
+    padding: 0 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+}
+
+.chevron-header {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    opacity: 0.5;
+    position: relative;
+    top: 2px;
+}
+
+#hello-user {
+    font-size: 14px;
+    align-items: baseline;
+    margin-left: 8px;
+}
+
+#hello-user span span {
+    font-family: 'evolve-bold', sans-serif;
+}
+
+#hello-user small, #hello-user small b {
+    font-size: 12px;
+    font-style: italic;
+    opacity: 0.7;
+}

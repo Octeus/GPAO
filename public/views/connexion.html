@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="referrer" content="origin">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#F7F7F7" />
+  <title>Octeus DataCommander</title>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!-- Icon -->
+  <link rel="icon" type="image/png" href="../assets/media/img/favicon.png">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/connexion.css">
+</head>
+<body id="body">
+<div id="conn-loader"><span></span></div>
+<div id="connexion-container">
+  <div id="conn-form-known" class="containers border-color bg-2">
+    <p class="hello-para color" id="conn-hello">Welcome back <span class="user-name"></span> !</p>
+    <label class="form-control" for="conn-password">
+      <span class="color-2">Password</span>
+      <input spellcheck="false" class="color" id="conn-password" type="password" name="password">
+      <svg class="color eyes" viewBox="0 0 32 32">
+        <path d="M16 6c-6.979 0-13.028 4.064-16 10 2.972 5.936 9.021 10 16 10s13.027-4.064 16-10c-2.972-5.936-9.021-10-16-10zM23.889 11.303c1.88 1.199 3.473 2.805 4.67 4.697-1.197 1.891-2.79 3.498-4.67 4.697-2.362 1.507-5.090 2.303-7.889 2.303s-5.527-0.796-7.889-2.303c-1.88-1.199-3.473-2.805-4.67-4.697 1.197-1.891 2.79-3.498 4.67-4.697 0.122-0.078 0.246-0.154 0.371-0.228-0.311 0.854-0.482 1.776-0.482 2.737 0 4.418 3.582 8 8 8s8-3.582 8-8c0-0.962-0.17-1.883-0.482-2.737 0.124 0.074 0.248 0.15 0.371 0.228v0zM16 13c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+      </svg>
+    </label>
+    <div class="btns-containers bg">
+      <button class="btn submit-conn-form active bg-2 color">Connexion</button>
+      <button class="btn quit-app bg-2 color-2">Exit</button>
+    </div>
+    <small class="color-2">If you are not&nbsp;<span class="user-name"></span>, click&nbsp;<span data-id="conn-form-new" class="switcher">here</span>.</small>
+  </div>
+  <div id="conn-form-new" class="hidden containers border-color bg-2">
+    <p class="hello-para color" id="conn-new">Please fill connexion fields with your credentials</p>
+    <label class="form-control" for="conn-email-new">
+      <span class="color-2">Email</span>
+      <input spellcheck="false" class="color" id="conn-email-new" type="email" name="email">
+    </label>
+    <label class="form-control" for="conn-password-new">
+      <span class="color-2">Password</span>
+      <input spellcheck="false" class="color" id="conn-password-new" type="password" name="password">
+      <svg class="color eyes" viewBox="0 0 32 32">
+        <path d="M16 6c-6.979 0-13.028 4.064-16 10 2.972 5.936 9.021 10 16 10s13.027-4.064 16-10c-2.972-5.936-9.021-10-16-10zM23.889 11.303c1.88 1.199 3.473 2.805 4.67 4.697-1.197 1.891-2.79 3.498-4.67 4.697-2.362 1.507-5.090 2.303-7.889 2.303s-5.527-0.796-7.889-2.303c-1.88-1.199-3.473-2.805-4.67-4.697 1.197-1.891 2.79-3.498 4.67-4.697 0.122-0.078 0.246-0.154 0.371-0.228-0.311 0.854-0.482 1.776-0.482 2.737 0 4.418 3.582 8 8 8s8-3.582 8-8c0-0.962-0.17-1.883-0.482-2.737 0.124 0.074 0.248 0.15 0.371 0.228v0zM16 13c0 1.657-1.343 3-3 3s-3-1.343-3-3 1.343-3 3-3 3 1.343 3 3z"></path>
+      </svg>
+    </label>
+    <div class="btns-containers bg">
+      <button class="btn submit-conn-form active bg-2 color">Connexion</button>
+      <button class="btn quit-app bg-2 color-2">Exit</button>
+    </div>
+    <small class="switcher color-2" data-id="conn-form-known">
+      <svg viewBox="0 0 24 24">
+        <path d="M18 11h-7.244l1.586-1.586c0.781-0.781 0.781-2.049 0-2.828-0.781-0.781-2.047-0.781-2.828 0l-6.414 6.414 6.414 6.414c0.39 0.391 0.902 0.586 1.414 0.586s1.023-0.195 1.414-0.586c0.781-0.781 0.781-2.049 0-2.828l-1.586-1.586h7.244c1.104 0 2-0.896 2-2 0-1.105-0.896-2-2-2z"></path>
+      </svg>
+      Back to the known user
+    </small>
+  </div>
+</div>
+<script type="text/javascript" src="../assets/js/connexion.js"></script>
+</body>
+</html>

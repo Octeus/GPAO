@@ -1,0 +1,26 @@
+.buttons > button {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 8px 16px;
+    margin: 5px;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.buttons > button.active {
+    color: #fff;
+}
+
+.buttons > button.inactive {
+    opacity: 0.5;
+}
+
+.buttons > button.inactive {
+    opacity: 0.5;
+}

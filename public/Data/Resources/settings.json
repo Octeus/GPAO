@@ -1,0 +1,30 @@
+{
+    "appName": "DataCommander",
+    "version": "1.0.0",
+    "theme": "dark",
+    "save": false,
+    "print": {
+        "dimensions": {
+            "width": 34,
+            "height": 12
+        },
+        "format": "pdf"
+    },
+    "stats": {
+        "items": [
+            "created",
+            "updated"
+        ],
+        "lapse": [
+            "month",
+            "year"
+        ],
+        "presentation": "Bar"
+    },
+    "lang": "fr",
+    "windows": {
+        "left": "Customer informations",
+        "right": "Browse database from project",
+        "bottom": "Mounted devices"
+    }
+}

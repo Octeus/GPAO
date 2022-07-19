@@ -435,9 +435,9 @@ exports.projectMenu = (win) => {
                         win.webContents.send('checkForUpdates.reply');
                     }
                 },
-                /*{role: 'reload'},
+                {role: 'reload'},
                 {role: 'forceReload'},
-                {role: 'toggleDevTools'},*/
+                {role: 'toggleDevTools'},
             ]
         },
         {

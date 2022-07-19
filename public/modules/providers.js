@@ -12,7 +12,7 @@ const { BrowserWindow } = require('electron'),
     ipc = require('electron').ipcMain,
     { save, openNative, importXLS, openDialog } = require('./filesManager'),
     { cypher } = require('./volumes'),
-    reactProdMode = false,
+    reactProdMode = true,
     isWindows = process.platform === "win32",
     mainIndex = (reactProdMode === false)
         ? `http://localhost:3000`
@@ -77,7 +77,7 @@ exports.buildWindow = (data, prev = false, preload = false) => {
         minHeight: data.minHeight,
         fullscreenable:data.fullscreen,
         webPreferences: {
-            devTools: true,
+            devTools: false,
             enableRemoteModule: data.remote,
             nodeIntegration: true,
             worldSafeExecuteJavaScript: true,
@@ -87,9 +87,9 @@ exports.buildWindow = (data, prev = false, preload = false) => {
         }
     });
 
-    if (data.odt === true) {
+    /*if (data.odt === true) {
         win.webContents.openDevTools();
-    }
+    }*/
 
     if (data.clickable === false) {
         win.setIgnoreMouseEvents(true);
@@ -103,7 +103,7 @@ exports.buildWindow = (data, prev = false, preload = false) => {
         Menu.setApplicationMenu(menu);
     }
 
-    if (data.name === 'main') {
+    /*if (data.name === 'main') {
 
         win.webContents.on('before-input-event', (event, input) => {
 
@@ -128,7 +128,7 @@ exports.buildWindow = (data, prev = false, preload = false) => {
                 event.preventDefault();
             }
         })
-    }
+    }*/
 
     win.loadURL(data.file);
 

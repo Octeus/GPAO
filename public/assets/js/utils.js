@@ -286,7 +286,52 @@ function connectionStt(mode, details) {
 function getRootCSS() {
 
     let final = {},
-        rootFile = fs.readFileSync(pathUtils.resolve('public/assets/css/root.css'), {encoding:'utf8', flag:'r'}),
+        rootFile = ':root {\n' +
+            '    --default-theme-bg-primary: #f7f7f7;\n' +
+            '    --default-theme-bg-secondary: #d1d1d1;\n' +
+            '    --default-theme-bg-hover: #c1c1c1;\n' +
+            '    --default-theme-color-primary: #3c3c3c;\n' +
+            '    --default-theme-color-secondary: #6d6d6d;\n' +
+            '    --default-theme-border-color: #191919;\n' +
+            '    --default-theme-exit-heading-bg: #ccc;\n' +
+            '    --default-theme-opacity: rgba(255, 255, 255, 0.5);\n' +
+            '\n' +
+            '    --dark-theme-bg-primary: #191919;\n' +
+            '    --dark-theme-bg-secondary: #1f1f1f;\n' +
+            '    --dark-theme-bg-hover: #363636;\n' +
+            '    --dark-theme-color-primary: #f7f7f7;\n' +
+            '    --dark-theme-color-secondary: #a1a1a1;\n' +
+            '    --dark-theme-border-color: #5d5d5d;\n' +
+            '    --dark-theme-exit-heading-bg: #191919;\n' +
+            '    --dark-theme-opacity: rgba(0, 0, 0, 0.5);\n' +
+            '\n' +
+            '    --ocean-theme-bg-primary: #041111;\n' +
+            '    --ocean-theme-bg-secondary: #111f28;\n' +
+            '    --ocean-theme-bg-hover: #264659;\n' +
+            '    --ocean-theme-color-primary: #457b9d;\n' +
+            '    --ocean-theme-color-secondary: #a8cfdd;\n' +
+            '    --ocean-theme-border-color: #ccc;\n' +
+            '    --ocean-theme-exit-heading-bg: #041111;\n' +
+            '    --ocean-theme-opacity: rgba(0, 0, 0, 0.5);\n' +
+            '\n' +
+            '    --dracula-theme-bg-primary: #110202;\n' +
+            '    --dracula-theme-bg-secondary: #161616;\n' +
+            '    --dracula-theme-bg-hover: #404040;\n' +
+            '    --dracula-theme-color-primary: #8f0000;\n' +
+            '    --dracula-theme-color-secondary: #fff;\n' +
+            '    --dracula-theme-border-color: #110207;\n' +
+            '    --dracula-theme-exit-heading-bg: #110202;\n' +
+            '    --dracula-theme-opacity: rgba(0, 0, 0, 0.5);\n' +
+            '\n' +
+            '    --unicorn-theme-bg-primary: #f7e9f3;\n' +
+            '    --unicorn-theme-bg-secondary: #aaeae8;\n' +
+            '    --unicorn-theme-bg-hover: #ebc7e1;\n' +
+            '    --unicorn-theme-color-primary: #cbb272;\n' +
+            '    --unicorn-theme-color-secondary: #af7ce0;\n' +
+            '    --unicorn-theme-border-color: #abe7e2;\n' +
+            '    --unicorn-theme-exit-heading-bg: #aaeae8;\n' +
+            '    --unicorn-theme-opacity: rgba(255, 255, 255, 0.5);\n' +
+            '}',
         splitRootFile = rootFile.split('\n');
 
     for (let i = 0; i < splitRootFile.length; i++) {
@@ -1114,6 +1159,7 @@ function prepareCard(theme) {
 ========================================================
  */
 
+/*
 let get = JSON.parse(decodeURI(window.location.search.replace('?data=', '')));
 
 if (get.view === 'main') {
@@ -1205,8 +1251,6 @@ if (get.view === 'main') {
 
     ipc.on('exitApp', (event, data) => {
 
-        console.log('test')
-
         exitModal.style.display = 'flex';
         if (!isWindowsNav) {
             setTimeout(function () {
@@ -1238,4 +1282,4 @@ if (get.view === 'main') {
             }
         }
     }
-}
+}*/

@@ -93,3 +93,22 @@ a:hover {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
 }
+
+input::selection, select::selection, textarea::selection {
+    background-color: darkgrey;
+    color: #fff;
+}
+
+button {
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0);
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    border-radius: 0;
+    transition: all ease-in-out 0.2s;
+}
+
+button:not(:disabled):hover {
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
